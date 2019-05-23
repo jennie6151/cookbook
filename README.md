@@ -117,5 +117,6 @@ I used **Git** for versioning on this project. And hosted this on Heroku.
 ##Commands to remember
 py -m venv env
 env\Scripts\activate
+set FLASK_ENV=development
 
 #### *MIT © 2019 Jennifer Dick*
