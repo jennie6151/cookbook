@@ -2,3 +2,27 @@
     margin:10px;
     width: 100%;
 }
+
+.recipe-title {
+    color:#bada55;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.recipe-facts {
+    margin: 12px;
+    line-height: 35px;
+    font-size: 20px;
+}
+
+.recipe-subtitles {
+    color:#bada55;
+    margin-top: 20px;
+}
+
+.footer-styling {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height:8%;
+}
