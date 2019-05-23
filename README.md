@@ -114,4 +114,8 @@ I used **Git** for versioning on this project. And hosted this on Heroku.
 * *Paul Lewis* - colleague (Software Developer) who tested my finished site.
 * WEBSITE USED FOR RECIPES
 
+##Commands to remember
+py -m venv env
+env\Scripts\activate
+
 #### *MIT © 2019 Jennifer Dick*
