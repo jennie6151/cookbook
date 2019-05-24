@@ -1,0 +1,14 @@
+{
+"Id": "Number",
+"recipeTitle": "String",
+"customFile":
+"recipeIngredients": "String",
+"recipeMethod": "String",
+"prepTime": "Number",
+"cookTime": "Number",
+"recipeDifficulty": ["recipeDifficulty_1","recipeDifficulty_2"],
+"recipeServes": "Number",
+"dietType": ["dietType_1","dietType_2"],
+"cuisineType": ["cuisineType_1","cuisineType_2"],
+"recipeNotes": "String"
+}
