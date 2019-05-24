@@ -1,10 +1,19 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request,redirect,url_for
+from bson import ObjectId
+from pymongo import MongoClient
+import os
 
 app = Flask(__name__)
 
+
+client = MongoClient("mongodb+srv://app1:fRH3SQCA9Tq5VG18@myfirstcluster-7pmlf.mongodb.net/Cookbook?retryWrites=true")
+db = client.Cookbook
+Recipes = db.Recipes
+
 @app.route("/")
 def home():
-    return render_template("index.html")
+    pageRecipes = Recipes.find()
+    return render_template("index.html",pageRecipes=pageRecipes)
 
 @app.route("/viewRecipes")
 def viewRecipes():
@@ -16,3 +25,4 @@ def addRecipes():
 
 if __name__ == "__main__":
     app.run(debug=True)
+

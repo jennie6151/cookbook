@@ -1,5 +1,6 @@
 {
 "Id": "Number",
+"username": "String",
 "recipeTitle": "String",
 "customFile":
 "recipeIngredients": "String",
