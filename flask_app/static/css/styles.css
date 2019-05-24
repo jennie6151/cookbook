@@ -11,6 +11,7 @@ body {
     color:#bada55;
     margin-top: 30px;
     margin-bottom: 20px;
+    margin-left:20px;
 }
 
 .recipe-facts {
@@ -22,6 +23,11 @@ body {
 .recipe-subtitles {
     color:#bada55;
     margin-top: 20px;
+}
+
+.form-group-required .control-label:after {
+    content:"*";
+    color: #ff0000;
 }
 
 .footer-styling {
