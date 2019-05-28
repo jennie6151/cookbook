@@ -11,53 +11,50 @@
     {% block content %}
     <main role="main">
         <div class="container">
+                {% for item in recipe %}
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="recipe-title">Placeholder title</h1>
+                    <h1 class="recipe-title">{{ item["name"] }}</h1>
                     <div class="row">
                         <div class="col-lg-3 col-md-4 col-xs-12"><img src="\static\images\allRecipes.jpg"
                                 class="rounded" alt="Recipe photo"></div>
                         <div class="col-lg-5 col-md-8 col-xs-12">
                             <ul class="recipe-facts">
-                                <li>Prep time:</li>
-                                <li>Cook time:</li>
-                                <li>Difficulty:</li>
-                                <li>Serves:</li>
+                                <li>Prep time: {{ item["prepTime"] }}</li>
+                                <li>Cook time: {{ item["cookTime"] }}</li>
+                                <li>Difficulty: {{ item["recipeDifficulty"] }}</li>
+                                <li>Serves: {{ item["recipeServes"] }}</li>
                             </ul>
                         </div>
-                        <div class="col-lg-4 col-xs-12">Genres placeholder</div>
+                        <div class="col-lg-4 col-xs-12">
+                                <ul class="recipe-facts">
+                                        <li>{{ item["dietType"] }}</li>
+                                        <li>{{ item["cuisineType"] }}</li>
+                                    </ul>
+                        </div>
                     </div>
                 </div>
+           
             </div>
             <div class="row">
                 <div class="col-xs-12 col-lg-6">
                     <h4 class="recipe-subtitles">Ingredients</h4>
                     <ul>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
+                        <li>{{ item["recipeIngredients"] }}</li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-lg-6">
                     <h4 class="recipe-subtitles">Method</h4>
                     <ol>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
+                        <li>{{ item["recipeMethod"] }}</li>
                     </ol>
                 </div>
 
                 <div class="col-lg-12">
-                    <h4 class="recipe-subtitles">Notes placeholder</h4>
+                    <h4 class="recipe-subtitles">Notes</h4>
+                    <h5>{{ item["recipeNotes"] }}</h5>
                 </div>
-
+                {%endfor%}
             </div>
         </div>
 

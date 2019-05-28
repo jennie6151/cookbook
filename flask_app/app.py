@@ -19,7 +19,9 @@ def home():
 
 @app.route("/viewRecipes")
 def viewRecipes():
-    return render_template("viewrecipes.html")
+    id=request.values.get("_id")  
+    recipe=Recipes.find({"_id":ObjectId(id)}) 
+    return render_template("viewrecipes.html", recipe=recipe)
 
 
 @app.route("/addRecipes")

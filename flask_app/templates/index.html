@@ -11,10 +11,7 @@
   {% block content %}
   <main role="main">
 
-      {% for recipe in pageRecipes %}
-<h1>{{ recipe["name"] }}</h1>
-<h1>{{ recipe["age"] }}</h1>
-      {%endfor%}
+
 
     <section class="jumbotron text-center">
       <div class="container">
@@ -34,122 +31,19 @@
     <div>
       <div class="container">
         <div class="row">
+          {% for recipe in pageRecipes %}
           <div class="col-md-4">
             <div class="card card-styling">
-              <img src="\static\images\allRecipes.jpg" class="card-img-top" alt="Plate of food">
               <div class="card-body">
-                <h5 class="card-title">All recipes</h5>
-                <a href="#" class="btn btn-info btn-block">See recipes</a>
+                <h5 class="card-title">{{ recipe["name"] }}</h5>
+                <h6>{{ recipe["recipeServes"] }}</h6>
+                <a href="./viewRecipes?_id={{ recipe['_id'] }}" class="btn btn-info btn-block">See recipe</a>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card card-styling">
-              <img src="\static\images\allRecipes.jpg" class="card-img-top" alt="Plate of food">
-              <div class="card-body">
-                <h5 class="card-title">All recipes</h5>
-                <a href="#" class="btn btn-info btn-block">See recipes</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-styling">
-              <img src="\static\images\allRecipes.jpg" class="card-img-top" alt="Plate of food">
-              <div class="card-body">
-                <h5 class="card-title">All recipes</h5>
-                <a href="#" class="btn btn-info btn-block">See recipes</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card card-styling">
-              <img src="\static\images\allRecipes.jpg" class="card-img-top" alt="Plate of food">
-              <div class="card-body">
-                <h5 class="card-title">All recipes</h5>
-                <a href="#" class="btn btn-info btn-block">See recipes</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-styling">
-              <img src="\static\images\allRecipes.jpg" class="card-img-top" alt="Plate of food">
-              <div class="card-body">
-                <h5 class="card-title">All recipes</h5>
-                <a href="#" class="btn btn-info btn-block">See recipes</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-styling">
-              <img src="\static\images\allRecipes.jpg" class="card-img-top" alt="Plate of food">
-              <div class="card-body">
-                <h5 class="card-title">All recipes</h5>
-                <a href="#" class="btn btn-info btn-block">See recipes</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card card-styling">
-              <img src="\static\images\allRecipes.jpg" class="card-img-top" alt="Plate of food">
-              <div class="card-body">
-                <h5 class="card-title">All recipes</h5>
-                <a href="#" class="btn btn-info btn-block">See recipes</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-styling">
-              <img src="\static\images\allRecipes.jpg" class="card-img-top" alt="Plate of food">
-              <div class="card-body">
-                <h5 class="card-title">All recipes</h5>
-                <a href="#" class="btn btn-info btn-block">See recipes</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-styling">
-              <img src="\static\images\allRecipes.jpg" class="card-img-top" alt="Plate of food">
-              <div class="card-body">
-                <h5 class="card-title">All recipes</h5>
-                <a href="#" class="btn btn-info btn-block">See recipes</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card card-styling">
-              <img src="\static\images\allRecipes.jpg" class="card-img-top" alt="Plate of food">
-              <div class="card-body">
-                <h5 class="card-title">All recipes</h5>
-                <a href="#" class="btn btn-info btn-block">See recipes</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-styling">
-              <img src="\static\images\allRecipes.jpg" class="card-img-top" alt="Plate of food">
-              <div class="card-body">
-                <h5 class="card-title">All recipes</h5>
-                <a href="#" class="btn btn-info btn-block">See recipes</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-styling">
-              <img src="\static\images\allRecipes.jpg" class="card-img-top" alt="Plate of food">
-              <div class="card-body">
-                <h5 class="card-title">All recipes</h5>
-                <a href="#" class="btn btn-info btn-block">See recipes</a>
-              </div>
-            </div>
-          </div>
-
+          {%endfor%}
         </div>
       </div>
-    </div>
-
     </div>
 
   </main>

@@ -115,6 +115,8 @@ I used **Git** for versioning on this project. And hosted this on Heroku.
 * WEBSITE USED FOR RECIPES
 
 ##Commands to remember
+cmd.exe
+cd flask_app
 py -m venv env
 env\Scripts\activate
 set FLASK_ENV=development
