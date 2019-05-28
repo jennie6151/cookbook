@@ -28,6 +28,12 @@ def viewRecipes():
 def addRecipes():
     return render_template("addrecipes.html")
 
+@app.route("/edit")  
+def edit ():  
+    id=request.values.get("_id")  
+    recipe=Recipes.find({"_id":ObjectId(id)})  
+    return render_template('editrecipes.html', recipe=recipe)
+
 @app.route("/remove")  
 def remove ():  
     id=request.values.get("_id")  
