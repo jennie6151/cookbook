@@ -34,6 +34,21 @@ def edit ():
     recipe=Recipes.find({"_id":ObjectId(id)})  
     return render_template('editrecipes.html', recipe=recipe)
 
+@app.route("/updateRecipe", methods=['POST'])  
+def updateRecipe ():
+    id=request.values.get("_id") 
+    username = request.values.get("username")
+    recipeTitle = request.values.get("name")
+    recipeIngredients = request.values.get("recipeIngredients")
+    recipeMethod = request.values.get("recipeMethod")
+    prepTime = request.values.get("prepTime")
+    cookTime = request.values.get("cookTime")
+    recipeServes = request.values.get("recipeServes")
+    recipeNotes = request.values.get("recipeNotes")
+    Recipes.update({"_id":ObjectId(id)}, {'$set':{"username":username, "name":recipeTitle, "recipeIngredients":recipeIngredients,
+                    "recipeMethod":recipeMethod, "prepTime":prepTime, "cookTime":cookTime, "recipeServes":recipeServes, "recipeNotes":recipeNotes}})
+    return redirect("/")
+
 @app.route("/remove")  
 def remove ():  
     id=request.values.get("_id")  

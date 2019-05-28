@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            
+            <form action="/updateRecipe" method="POST"> 
             {% for item in recipe %}
             Unique Object ID : {{ item['_id'] }}<br />
             <input type="text" name="_id" value="{{ item['_id'] }}" hidden>
@@ -199,6 +199,7 @@
                 </div>
             </div>
         </div>
+    </form> 
     </main>
 
     {% endblock %}
