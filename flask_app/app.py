@@ -28,6 +28,11 @@ def viewRecipes():
 def addRecipes():
     return render_template("addrecipes.html")
 
+@app.route("/remove")  
+def remove ():  
+    id=request.values.get("_id")  
+    Recipes.remove({"_id":ObjectId(id)})  
+    return redirect("/")
 
 @app.route("/action", methods=['POST'])
 def action():
