@@ -17,6 +17,16 @@ def home():
     pageRecipes = Recipes.find()
     return render_template("index.html", pageRecipes=pageRecipes)
 
+@app.route("/search", methods=['GET'])  
+def search():   
+    recipeSearch=request.values.get("recipeSearch")  
+    refer="recipeTitle"
+    if(recipeSearch=="_id"):  
+        recipe = Recipes.find({refer:ObjectId(recipeSearch)})  
+    else:  
+        recipe = Recipes.find({refer:recipeSearch})  
+    return render_template('searchresults.html',searchResults=recipe)  
+
 @app.route("/viewRecipes")
 def viewRecipes():
     id=request.values.get("_id")  
@@ -38,14 +48,14 @@ def edit ():
 def updateRecipe ():
     id=request.values.get("_id") 
     username = request.values.get("username")
-    recipeTitle = request.values.get("name")
+    recipeTitle = request.values.get("recipeTitle")
     recipeIngredients = request.values.get("recipeIngredients")
     recipeMethod = request.values.get("recipeMethod")
     prepTime = request.values.get("prepTime")
     cookTime = request.values.get("cookTime")
     recipeServes = request.values.get("recipeServes")
     recipeNotes = request.values.get("recipeNotes")
-    Recipes.update({"_id":ObjectId(id)}, {'$set':{"username":username, "name":recipeTitle, "recipeIngredients":recipeIngredients,
+    Recipes.update({"_id":ObjectId(id)}, {'$set':{"username":username, "recipeTitle":recipeTitle, "recipeIngredients":recipeIngredients,
                     "recipeMethod":recipeMethod, "prepTime":prepTime, "cookTime":cookTime, "recipeServes":recipeServes, "recipeNotes":recipeNotes}})
     return redirect("/")
 
@@ -65,7 +75,7 @@ def action():
     cookTime = request.values.get("cookTime")
     recipeServes = request.values.get("recipeServes")
     recipeNotes = request.values.get("recipeNotes")
-    Recipes.insert({"username": username, "name": recipeTitle, "recipeIngredients": recipeIngredients,
+    Recipes.insert({"username": username, "recipeTitle": recipeTitle, "recipeIngredients": recipeIngredients,
                     "recipeMethod": recipeMethod, "prepTime": prepTime, "cookTime": cookTime, "recipeServes": recipeServes, "recipeNotes": recipeNotes})
     return redirect("/")
 

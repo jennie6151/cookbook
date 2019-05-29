@@ -25,6 +25,14 @@
               have something for you.</p>
           </div>
         </div>
+          <form action="/search" method="GET">
+            <div class="col-lg-10 mx-auto">
+              <label for="recipeSearch" class="control-label"></label>
+              <input type="text" id="recipeSearch" name="recipeSearch" placeholder="Ingredient, dish, keyword..." />
+              <button type="submit">Search</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -35,7 +43,7 @@
           <div class="col-md-4">
             <div class="card card-styling">
               <div class="card-body">
-                <h5 class="card-title">{{ recipe["name"] }}</h5>
+                <h5 class="card-title">{{ recipe["recipeTitle"] }}</h5>
                 <h6>{{ recipe["recipeServes"] }}</h6>
                 <a href="./viewRecipes?_id={{ recipe['_id'] }}" class="btn btn-info btn-block">See recipe</a>
               </div>
