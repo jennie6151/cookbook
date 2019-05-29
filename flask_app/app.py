@@ -53,10 +53,13 @@ def updateRecipe ():
     recipeMethod = request.values.get("recipeMethod")
     prepTime = request.values.get("prepTime")
     cookTime = request.values.get("cookTime")
+    recipeDifficulty = request.form.get("recipeDifficulty")
     recipeServes = request.values.get("recipeServes")
+    dietType = request.form.getlist("dietType")
+    cuisineType = request.form.get("cuisineType")
     recipeNotes = request.values.get("recipeNotes")
     Recipes.update({"_id":ObjectId(id)}, {'$set':{"username":username, "recipeTitle":recipeTitle, "recipeIngredients":recipeIngredients,
-                    "recipeMethod":recipeMethod, "prepTime":prepTime, "cookTime":cookTime, "recipeServes":recipeServes, "recipeNotes":recipeNotes}})
+                    "recipeMethod":recipeMethod, "prepTime":prepTime, "cookTime":cookTime, "recipeDifficulty": recipeDifficulty, "recipeServes": recipeServes, "dietType": dietType, "cuisineType": cuisineType, "recipeNotes":recipeNotes}})
     return redirect("/")
 
 @app.route("/remove")  
@@ -65,7 +68,7 @@ def remove ():
     Recipes.remove({"_id":ObjectId(id)})  
     return redirect("/")
 
-@app.route("/action", methods=['POST'])
+@app.route("/createRecipe", methods=['POST'])
 def action():
     username = request.values.get("username")
     recipeTitle = request.values.get("recipeTitle")
@@ -73,10 +76,13 @@ def action():
     recipeMethod = request.values.get("recipeMethod")
     prepTime = request.values.get("prepTime")
     cookTime = request.values.get("cookTime")
+    recipeDifficulty = request.form.get("recipeDifficulty")
     recipeServes = request.values.get("recipeServes")
+    dietType = request.form.getlist("dietType")
+    cuisineType = request.form.get("cuisineType")
     recipeNotes = request.values.get("recipeNotes")
     Recipes.insert({"username": username, "recipeTitle": recipeTitle, "recipeIngredients": recipeIngredients,
-                    "recipeMethod": recipeMethod, "prepTime": prepTime, "cookTime": cookTime, "recipeServes": recipeServes, "recipeNotes": recipeNotes})
+                    "recipeMethod": recipeMethod, "prepTime": prepTime, "cookTime": cookTime, "recipeDifficulty": recipeDifficulty, "recipeServes": recipeServes, "dietType": dietType, "cuisineType": cuisineType, "recipeNotes": recipeNotes})
     return redirect("/")
 
 if __name__ == "__main__":

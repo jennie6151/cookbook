@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <form action="/action" method="POST">
+                        <form action="/createRecipe" method="POST">
                                 <div class="form-group form-group-required col-lg-4">
                                         <label for="username" class="control-label">Username</label>
                                         <input type="text" class="form-control form-control-lg" id="username" name="username"
@@ -56,68 +56,68 @@
                             </div>
 
                             <div class="form-group form-group-required col-lg-11">
-                                <label for="prepTime" class="control-label">Prep time</label>
-                                <input type="text" class="form-control" id="prepTime" name="prepTime" placeholder="Time in minutes"
+                                <label for="prepTime" class="control-label">Prep time (in minutes)</label>
+                                <input type="number" class="form-control" id="prepTime" name="prepTime" placeholder="Time in minutes" 
                                     required>
                             </div>
 
                             <div class="form-group form-group-required col-lg-11">
-                                <label for="cookTime" class="control-label">Cook time</label>
-                                <input type="text" class="form-control" id="cookTime" name="cookTime" placeholder="Time in minutes"
+                                <label for="cookTime" class="control-label">Cook time (in minutes)</label>
+                                <input type="number" class="form-control" id="cookTime" name="cookTime" placeholder="Time in minutes"
                                     required>
                             </div>
 
                             <div class="form-group form-group-required col-lg-3">
                                 <label for="recipeDifficulty" class="control-label">Difficulty level</label>
-                                <select id="recipeDifficulty" class="form-control" required>
+                                <select id="recipeDifficulty" name="recipeDifficulty" class="form-control" required>
                                     <option selected>Choose...</option>
-                                    <option>Easy</option>
-                                    <option>More effort</option>
-                                    <option>A challenge</option>
+                                    <option>Beginner</option>
+                                    <option>Intermediate</option>
+                                    <option>Advanced</option>
                                 </select>
                             </div>
 
                             <div class="form-group form-group-required col-lg-3">
                                 <label for="recipeServes" class="control-label">How many people does this recipe
                                     serve?</label>
-                                <input type="text" class="form-control" id="recipeServes" name="recipeServes"
+                                <input type="number" class="form-control" id="recipeServes" name="recipeServes"
                                     placeholder="Number of servings" required>
                             </div>
 
                             <div class="form-group col-lg-11">
                                 <label for="dietType">Diet type</label><br />
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" value="">Dairy-free
+                                    <input type="checkbox" name="dietType" id="dietType" value="Dairy-free">Dairy-free
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" value="">Egg-free
+                                    <input type="checkbox" name="dietType" id="dietType" value="Egg-free">Egg-free
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" value="">Gluten-free
+                                    <input type="checkbox" name="dietType" id="dietType" value="Gluten-free">Gluten-free
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" value="">Healthy
+                                    <input type="checkbox" name="dietType" id="dietType" value="Healthy">Healthy
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" value="">Heart-healthy
+                                    <input type="checkbox" name="dietType" id="dietType" value="Heart-healthy">Heart-healthy
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" value="">Low-calorie
+                                    <input type="checkbox" name="dietType" id="dietType" value="Low-calorie">Low-calorie
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" value="">Low-fat
+                                    <input type="checkbox" name="dietType" id="dietType" value="Low-fat">Low-fat
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" value="">Low-salt
+                                    <input type="checkbox" name="dietType" id="dietType" value="Low-salt">Low-salt
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" value="">Nut-free
+                                    <input type="checkbox" name="dietType" id="dietType" value="Nut-free">Nut-free
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" value="">Vegan
+                                    <input type="checkbox" name="dietType" id="dietType" value="Vegan">Vegan
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" value="">Vegetarian
+                                    <input type="checkbox" name="dietType" id="dietType" value="Vegetarian">Vegetarian
                                 </label>
                                 <small id="dietTypeHelpBlock" class="form-text text-info">
                                     Select all that apply
@@ -126,7 +126,7 @@
 
                             <div class="form-group form-group-required col-lg-3">
                                 <label for="cuisineType" class="control-label">Cuisine type</label>
-                                <select id="cuisineType" class="form-control" required>
+                                <select id="cuisineType" name="cuisineType" class="form-control" required>
                                     <option selected>Choose...</option>
                                     <option>African</option>
                                     <option>American</option>
