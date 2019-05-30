@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from bson import ObjectId
 from flask_pymongo import PyMongo
-import os
+import os, random
 
 app = Flask(__name__)
 
@@ -41,7 +41,8 @@ def action():
     recipeTitle = request.values.get("recipeTitle")
     if "recipeImage" in request.files:
         recipeImage = request.files["recipeImage"]
-        mongo.save_file(recipeImage.filename, recipeImage)
+        randomNumber= int(random.random() * 10000)
+        mongo.save_file(str(randomNumber) + recipeImage.filename, recipeImage)
     recipeIngredients = request.values.get("recipeIngredients")
     recipeMethod = request.values.get("recipeMethod")
     prepTime = request.values.get("prepTime")
@@ -51,7 +52,7 @@ def action():
     dietType = request.form.getlist("dietType")
     cuisineType = request.form.get("cuisineType")
     recipeNotes = request.values.get("recipeNotes")
-    Recipes.insert({"username": username, "recipeTitle": recipeTitle, "recipeImage": recipeImage.filename, "recipeIngredients": recipeIngredients,
+    Recipes.insert({"username": username, "recipeTitle": recipeTitle, "recipeImage": str(randomNumber) + recipeImage.filename, "recipeIngredients": recipeIngredients,
                     "recipeMethod": recipeMethod, "prepTime": prepTime, "cookTime": cookTime, "recipeDifficulty": recipeDifficulty, "recipeServes": recipeServes, "dietType": dietType, "cuisineType": cuisineType, "recipeNotes": recipeNotes})
     return redirect("/")
 
@@ -85,7 +86,9 @@ def remove ():
     Recipes.remove({"_id":ObjectId(id)})  
     return redirect("/")
 
-
+@app.route('/file/<filename>')
+def file(filename):
+    return mongo.send_file(filename)
 
 if __name__ == "__main__":
     app.run(debug=True)
