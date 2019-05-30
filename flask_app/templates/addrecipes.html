@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <form action="/createRecipe" method="POST">
+                        <form action="/createRecipe" method="POST" enctype="multipart/form-data">
                                 <div class="form-group form-group-required col-lg-4">
                                         <label for="username" class="control-label">Username</label>
                                         <input type="text" class="form-control form-control-lg" id="username" name="username"
@@ -38,8 +38,8 @@
                             </div>
 
                             <div class="form-group col-lg-8">
-                                <input type="file" class="" id="customFile">
-                                <label class="" for="customFile">Choose an image of the recipe</label>
+                                <input type="file" name="recipeImage" id="recipeImage">
+                                <label class="" for="recipeImage">Choose an image of the recipe</label>
                                 <small id="imageHelpBlock" class="form-text text-info">
                                     Remember you eat with your eyes first; so add a good 600x600px jpg or png
                                 </small>
@@ -127,54 +127,15 @@
                             <div class="form-group form-group-required col-lg-3">
                                 <label for="cuisineType" class="control-label">Cuisine type</label>
                                 <select id="cuisineType" name="cuisineType" class="form-control" required>
-                                    <option selected>Choose...</option>
                                     <option>African</option>
                                     <option>American</option>
                                     <option>Asian</option>
-                                    <option>Austrian</option>
-                                    <option>Balinese</option>
-                                    <option>Belgian</option>
-                                    <option>Brazilian</option>
                                     <option>British</option>
-                                    <option>Cajun & Creole</option>
-                                    <option>Caribbean</option>
-                                    <option>Chilean</option>
-                                    <option>Chinese</option>
-                                    <option>Cuban</option>
-                                    <option>Danish</option>
-                                    <option>Dutch</option>
-                                    <option>Eastern European</option>
-                                    <option>English</option>
-                                    <option>French</option>
-                                    <option>German</option>
-                                    <option>Greek</option>
-                                    <option>Hawaiian</option>
-                                    <option>Hungarian</option>
-                                    <option>Indian</option>
-                                    <option>Indonesian</option>
-                                    <option>Irish</option>
                                     <option>Italian</option>
                                     <option>Japanese</option>
-                                    <option>Jewish</option>
-                                    <option>Korean</option>
-                                    <option>Latin American</option>
                                     <option>Mediterranean</option>
                                     <option>Mexican</option>
-                                    <option>Middle Eastern</option>
-                                    <option>Moroccan</option>
-                                    <option>North African</option>
-                                    <option>Portugese</option>
-                                    <option>Scandinavian</option>
-                                    <option>Scottish</option>
-                                    <option>Southern & Soul</option>
-                                    <option>Southwestern</option>
-                                    <option>Spanish</option>
-                                    <option>Swedish</option>
-                                    <option>Swiss</option>
-                                    <option>Thai</option>
-                                    <option>Tunisian</option>
-                                    <option>Turkish</option>
-                                    <option>Vietnamese</option>
+                                    <option>Other</option>
                                 </select>
                             </div>
 

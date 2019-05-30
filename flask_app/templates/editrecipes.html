@@ -93,7 +93,7 @@
                             <div class="form-group col-lg-11">
                                 <label for="dietType">Diet type</label><br />
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="dietType" name="dietType" value="Dairy-free" {% if item['dietType'] =='Dairy-free' %} selected {% endif %}>Dairy-free
+                                    <input type="checkbox" id="dietType" name="dietType" value="Dairy-free" {% if item['dietType'] =='Dairy-free' %} checked {% endif %}>Dairy-free
                                 </label>
                                 <label class="checkbox-inline">
                                     <input type="checkbox" id="dietType" name="dietType" value="Egg-free">Egg-free
@@ -102,7 +102,7 @@
                                     <input type="checkbox" id="dietType" name="dietType" value="Gluten-free">Gluten-free
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="dietType" name="dietType" value="Healthy">Healthy
+                                    <input type="checkbox" id="dietType" name="dietType" value="Healthy" {% if item['dietType'] =='Healthy' %} checked {% endif %}>Healthy
                                 </label>
                                 <label class="checkbox-inline">
                                     <input type="checkbox" id="dietType" name="dietType" value="Heart-healthy">Heart-healthy
@@ -141,6 +141,7 @@
                                     <option {% if item['cuisineType'] =='Japanese' %} selected {% endif %}>Japanese</option>
                                     <option {% if item['cuisineType'] =='Mediterranean' %} selected {% endif %}>Mediterranean</option>
                                     <option {% if item['cuisineType'] =='Mexican' %} selected {% endif %}>Mexican</option> 
+                                    <option {% if item['cuisineType'] =='Other' %} selected {% endif %}>Other</option> 
                                 </select>
                             </div>
 

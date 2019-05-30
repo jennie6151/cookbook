@@ -1,16 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for
 from bson import ObjectId
-from pymongo import MongoClient
+from flask_pymongo import PyMongo
 import os
 
 app = Flask(__name__)
 
+app.config["MONGO_URI"] = "mongodb+srv://app1:fRH3SQCA9Tq5VG18@myfirstcluster-7pmlf.mongodb.net/Cookbook?retryWrites=true"
+mongo = PyMongo(app)
 
-client = MongoClient(
-    "mongodb+srv://app1:fRH3SQCA9Tq5VG18@myfirstcluster-7pmlf.mongodb.net/Cookbook?retryWrites=true")
-db = client.Cookbook
-Recipes = db.Recipes
-
+Recipes = mongo.db.Recipes
 
 @app.route("/")
 def home():
@@ -33,10 +31,29 @@ def viewRecipes():
     recipe=Recipes.find({"_id":ObjectId(id)}) 
     return render_template("viewrecipes.html", recipe=recipe)
 
-
 @app.route("/addRecipes")
 def addRecipes():
     return render_template("addrecipes.html")
+
+@app.route("/createRecipe", methods=['POST'])
+def action():
+    username = request.values.get("username")
+    recipeTitle = request.values.get("recipeTitle")
+    if "recipeImage" in request.files:
+        recipeImage = request.files["recipeImage"]
+        mongo.save_file(recipeImage.filename, recipeImage)
+    recipeIngredients = request.values.get("recipeIngredients")
+    recipeMethod = request.values.get("recipeMethod")
+    prepTime = request.values.get("prepTime")
+    cookTime = request.values.get("cookTime")
+    recipeDifficulty = request.form.get("recipeDifficulty")
+    recipeServes = request.values.get("recipeServes")
+    dietType = request.form.getlist("dietType")
+    cuisineType = request.form.get("cuisineType")
+    recipeNotes = request.values.get("recipeNotes")
+    Recipes.insert({"username": username, "recipeTitle": recipeTitle, "recipeImage": recipeImage.filename, "recipeIngredients": recipeIngredients,
+                    "recipeMethod": recipeMethod, "prepTime": prepTime, "cookTime": cookTime, "recipeDifficulty": recipeDifficulty, "recipeServes": recipeServes, "dietType": dietType, "cuisineType": cuisineType, "recipeNotes": recipeNotes})
+    return redirect("/")
 
 @app.route("/edit")  
 def edit ():  
@@ -68,22 +85,7 @@ def remove ():
     Recipes.remove({"_id":ObjectId(id)})  
     return redirect("/")
 
-@app.route("/createRecipe", methods=['POST'])
-def action():
-    username = request.values.get("username")
-    recipeTitle = request.values.get("recipeTitle")
-    recipeIngredients = request.values.get("recipeIngredients")
-    recipeMethod = request.values.get("recipeMethod")
-    prepTime = request.values.get("prepTime")
-    cookTime = request.values.get("cookTime")
-    recipeDifficulty = request.form.get("recipeDifficulty")
-    recipeServes = request.values.get("recipeServes")
-    dietType = request.form.getlist("dietType")
-    cuisineType = request.form.get("cuisineType")
-    recipeNotes = request.values.get("recipeNotes")
-    Recipes.insert({"username": username, "recipeTitle": recipeTitle, "recipeIngredients": recipeIngredients,
-                    "recipeMethod": recipeMethod, "prepTime": prepTime, "cookTime": cookTime, "recipeDifficulty": recipeDifficulty, "recipeServes": recipeServes, "dietType": dietType, "cuisineType": cuisineType, "recipeNotes": recipeNotes})
-    return redirect("/")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
