@@ -67,6 +67,14 @@ def updateRecipe ():
     id=request.values.get("_id") 
     username = request.values.get("username")
     recipeTitle = request.values.get("recipeTitle")
+    if "recipeImage" in request.files:
+        recipeImage = request.files["recipeImage"]
+        if recipeImage.filename != "":
+            randomNumber= int(random.random() * 10000)
+            newFileName = str(randomNumber) + recipeImage.filename
+            mongo.save_file(newFileName, recipeImage)
+            Recipes.update({"_id":ObjectId(id)}, {'$set': {"recipeImage":newFileName}})
+
     recipeIngredients = request.values.get("recipeIngredients")
     recipeMethod = request.values.get("recipeMethod")
     prepTime = request.values.get("prepTime")

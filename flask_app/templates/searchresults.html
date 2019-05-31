@@ -10,24 +10,28 @@
     {% extends "template.html" %}
     {% block content %}
     <main role="main">
-        <div class="container">
-                {% if searchResults[0] %}  
-                <h3>Recipe search results</h3>  
-                <table>  
-                    <tr id="row">  
-                        <td class="name">Recipe title</td>  
-                    </tr>  
-                    {% for recipe in searchResults %}  
-                    <tr class="datas">  
-                        <td class="name">{{ recipe["recipeTitle"] }}</td>  
-                    {% endfor %}  
-                {% else %}  
-                    <h5>No recipe found</h5>  
-                {% endif %}  
-                </table>  
-                <a href="/">Return to homepage</a>  
-                
-        </div>
+
+
+            <div class="container">
+                    <div class="row">
+                      {% for recipe in searchResults %}
+                      <div class="col-md-4">
+                        <div class="card card-styling">
+                          <div class="card-body">
+                            <img src="{{url_for('file', filename=recipe['recipeImage'])}}">
+                            <h5 class="card-title">{{ recipe["recipeTitle"] }}</h5>
+                            <h6>{{ recipe["recipeServes"] }}</h6>
+                            <a href="./viewRecipes?_id={{ recipe['_id'] }}" class="btn btn-info btn-block">See recipe</a>
+                          </div>
+                        </div>
+                      </div>
+                      {%endfor%}
+                    </div>
+                  </div>
+
+
+
+
     </main>
     {% endblock %}
 </body>

@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <form action="/updateRecipe" method="POST"> 
+            <form action="/updateRecipe" method="POST" enctype="multipart/form-data"> 
             {% for item in recipe %}
             Unique Object ID : {{ item['_id'] }}<br />
             <input type="text" name="_id" value="{{ item['_id'] }}" hidden>
@@ -43,8 +43,8 @@
                             </div>
 
                             <div class="form-group col-lg-8">
-                                <input type="file" class="" id="customFile">
-                                <label class="" for="customFile">Choose an image of the recipe</label>
+                                <input type="file" class="" id="recipeImage" name="recipeImage">
+                                <label class="" for="recipeImage">Choose an image of the recipe</label>
                                 <small id="imageHelpBlock" class="form-text text-info">
                                     Remember you eat with your eyes first; so add a good 600x600px jpg or png
                                 </small>
@@ -96,34 +96,34 @@
                                     <input type="checkbox" id="dietType" name="dietType" value="Dairy-free" {% if item['dietType'] =='Dairy-free' %} checked {% endif %}>Dairy-free
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="dietType" name="dietType" value="Egg-free">Egg-free
+                                    <input type="checkbox" id="dietType" name="dietType" value="Egg-free" {% if item['dietType'] =='Egg-free' %} checked {% endif %}>Egg-free
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="dietType" name="dietType" value="Gluten-free">Gluten-free
+                                    <input type="checkbox" id="dietType" name="dietType" value="Gluten-free" {% if item['dietType'] =='Gluten-free' %} checked {% endif %}>Gluten-free
                                 </label>
                                 <label class="checkbox-inline">
                                     <input type="checkbox" id="dietType" name="dietType" value="Healthy" {% if item['dietType'] =='Healthy' %} checked {% endif %}>Healthy
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="dietType" name="dietType" value="Heart-healthy">Heart-healthy
+                                    <input type="checkbox" id="dietType" name="dietType" value="Heart-healthy" {% if item['dietType'] =='Heart-healthy' %} checked {% endif %}>Heart-healthy
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="dietType" name="dietType" value="Low-calorie">Low-calorie
+                                    <input type="checkbox" id="dietType" name="dietType" value="Low-calorie" {% if item['dietType'] =='Low-calorie' %} checked {% endif %}>Low-calorie
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="dietType" name="dietType" value="Low-fat">Low-fat
+                                    <input type="checkbox" id="dietType" name="dietType" value="Low-fat" {% if item['dietType'] =='Low-fat' %} checked {% endif %}>Low-fat
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="dietType" name="dietType" value="Low-salt">Low-salt
+                                    <input type="checkbox" id="dietType" name="dietType" value="Low-salt" {% if item['dietType'] =='Low-salt' %} checked {% endif %}>Low-salt
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="dietType" name="dietType" value="Nut-free">Nut-free
+                                    <input type="checkbox" id="dietType" name="dietType" value="Nut-free" {% if item['dietType'] =='Nut-free' %} checked {% endif %}>Nut-free
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="dietType" name="dietType" value="Vegan">Vegan
+                                    <input type="checkbox" id="dietType" name="dietType" value="Vegan" {% if item['dietType'] =='Vegan' %} checked {% endif %}>Vegan
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="dietType" name="dietType" value="Vegetarian">Vegetarian
+                                    <input type="checkbox" id="dietType" name="dietType" value="Vegetarian" {% if item['dietType'] =='Vegetarian' %} checked {% endif %}>Vegetarian
                                 </label>
                                 <small id="dietTypeHelpBlock" class="form-text text-info">
                                     Select all that apply
