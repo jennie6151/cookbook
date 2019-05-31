@@ -16,14 +16,15 @@ def home():
     return render_template("index.html", pageRecipes=pageRecipes)
 
 @app.route("/search", methods=['GET'])  
-def search():   
+def search():
+    mongo.db.Recipes.createIndex( { "recipeTitle": "text" } )
     recipeSearch=request.values.get("recipeSearch")  
     refer="recipeTitle"
     if(recipeSearch=="_id"):  
         recipe = Recipes.find({refer:ObjectId(recipeSearch)})  
-    else:  
-        recipe = Recipes.find({refer:recipeSearch})  
-    return render_template('searchresults.html',searchResults=recipe)  
+    else:
+        recipe = Recipes.find({ text: { search: "ham" } })
+    return render_template('searchresults.html',searchResults=results)  
 
 @app.route("/viewRecipes")
 def viewRecipes():
