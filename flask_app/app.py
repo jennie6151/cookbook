@@ -17,13 +17,12 @@ def home():
 
 @app.route("/search", methods=['GET'])  
 def search():
-    mongo.db.Recipes.createIndex( { "recipeTitle": "text" } )
     recipeSearch=request.values.get("recipeSearch")  
     refer="recipeTitle"
-    if(recipeSearch=="_id"):  
+    if(recipeSearch=="_id"):
         recipe = Recipes.find({refer:ObjectId(recipeSearch)})  
     else:
-        recipe = Recipes.find({ text: { search: "ham" } })
+        results = Recipes.find({'recipeTitle':{'$regex':'/.*'+recipeSearch+'.*/'}})
     return render_template('searchresults.html',searchResults=results)  
 
 @app.route("/viewRecipes")
