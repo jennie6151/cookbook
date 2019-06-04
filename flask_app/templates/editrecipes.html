@@ -33,33 +33,42 @@
 
                             <div class="form-group form-group-required col-lg-8">
                                 <label for="recipeTitle" class="control-label">Recipe title</label>
+                                <small id="titleHelpBlock" class="form-text text-info">
+                                        Include the name of the dish and/or it's main ingredient. Keep this
+                                        short
+                                    </small>
                                 <input type="text" class="form-control form-control-lg" id="recipeTitle"
                                     name="recipeTitle" value="{{ item['recipeTitle'] }}" required>
-                                <small id="titleHelpBlock" class="form-text text-info">
-                                    Include the name of the dish and/or it's main ingredient. Keep this
-                                    short
-                                </small>
                             </div>
 
                             <div class="form-group col-lg-8">
+                                    <small id="imageHelpBlock" class="form-text text-info">
+                                            Remember you eat with your eyes first; so add a good 600x600px jpg or
+                                            png
+                                        </small>
                                 <input type="file" class="" id="recipeImage" name="recipeImage">
                                 <label class="" for="recipeImage">Choose an image of the recipe</label>
-                                <small id="imageHelpBlock" class="form-text text-info">
-                                    Remember you eat with your eyes first; so add a good 600x600px jpg or
-                                    png
-                                </small>
+                                
                             </div>
 
                             <div class="form-group form-group-required col-lg-11">
                                 <label for="recipeIngredients" class="control-label">Ingredients</label>
-                                <textarea class="form-control" id="recipeIngredients" name="recipeIngredients" rows="5"
+                                <small id="imageHelpBlock" class="form-text text-info">
+                                        Write each ingredient on one line. Once written, highlight text and click on the
+                                        bullet point icon (unordered list).
+                                    </small>
+                                <textarea class="form-control richTextEditor" id="recipeIngredients" name="recipeIngredients" rows="5"
                                     value="{{ item['recipeIngredients'] }}"
                                     required>{{ item['recipeIngredients'] }}</textarea>
                             </div>
 
                             <div class="form-group form-group-required col-lg-11">
                                 <label for="recipeMethod" class="control-label">Method</label>
-                                <textarea class="form-control" id="recipeMethod" name="recipeMethod" rows="5"
+                                <small id="imageHelpBlock" class="form-text text-info">
+                                        Write each step of the recipe method on one line. Once written, highlight text and
+                                        click on the numbered list icon (ordered list).
+                                    </small>
+                                <textarea class="form-control richTextEditor" id="recipeMethod" name="recipeMethod" rows="5"
                                     value="{{ item['recipeMethod'] }}" required>{{ item['recipeMethod'] }}</textarea>
                             </div>
 
@@ -97,6 +106,9 @@
 
                             <div class="form-group col-lg-11">
                                 <label for="dietType">Diet type</label><br />
+                                <small id="dietTypeHelpBlock" class="form-text text-info">
+                                        Select all that apply
+                                    </small>
                                 <label class="checkbox-inline">
                                     <input type="checkbox" id="dietType" name="dietType" value="Dairy-free"
                                         {% if item['dietType'] =='Dairy-free' %} checked {% endif %}>Dairy-free
@@ -141,9 +153,6 @@
                                     <input type="checkbox" id="dietType" name="dietType" value="Vegetarian"
                                         {% if item['dietType'] =='Vegetarian' %} checked {% endif %}>Vegetarian
                                 </label>
-                                <small id="dietTypeHelpBlock" class="form-text text-info">
-                                    Select all that apply
-                                </small>
                             </div>
 
                             <div class="form-group form-group-required col-lg-3">

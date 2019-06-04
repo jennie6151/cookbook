@@ -12,7 +12,7 @@ Recipes = mongo.db.Recipes
 
 @app.route("/")
 def home():
-    pageRecipes = Recipes.find()
+    pageRecipes = Recipes.find().sort("_id", -1).limit(12)
     return render_template("index.html", pageRecipes=pageRecipes)
 
 @app.route("/search", methods=['GET'])  
