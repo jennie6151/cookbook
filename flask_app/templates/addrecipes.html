@@ -23,12 +23,12 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <form action="/createRecipe" method="POST" enctype="multipart/form-data">
-                            <div class="form-group form-group-required col-lg-4">
+                            <div class="form-group form-group-required formHeadings col-lg-4">
                                 <label for="username" class="control-label">Username</label>
                                 <input type="text" class="form-control form-control-lg" id="username" name="username"
                                     placeholder="Enter your username" required>
                             </div>
-                            <div class="form-group form-group-required col-lg-8">
+                            <div class="form-group form-group-required formHeadings col-lg-8">
                                 <label for="recipeTitle" class="control-label">Recipe title</label>
                                 <small id="titleHelpBlock" class="form-text text-info">
                                     Include the name of the dish and/or it's main ingredient. Keep this short
@@ -38,15 +38,15 @@
 
                             </div>
 
-                            <div class="form-group col-lg-8">
+                            <div class="form-group form-group-required formHeadings col-lg-8">
+                                    <label for="recipeImage" class="control-label">Choose an image of the recipe</label>
                                 <small id="imageHelpBlock" class="form-text text-info">
                                     Remember you eat with your eyes first; so add a good 300x250px jpg or png
                                 </small>
-                                <input type="file" name="recipeImage" id="recipeImage">
-                                <label class="" for="recipeImage">Choose an image of the recipe</label>
+                                <input type="file" name="recipeImage" id="recipeImage" required>
                             </div>
 
-                            <div class="form-group form-group-required col-lg-11">
+                            <div class="form-group form-group-required formHeadings col-lg-11">
                                 <label for="recipeIngredients" class="control-label">Ingredients</label>
                                 <small id="imageHelpBlock" class="form-text text-info">
                                     Write each ingredient on one line. Once written, highlight text and click on the
@@ -56,7 +56,7 @@
                                     name="recipeIngredients" rows="5" required></textarea>
                             </div>
 
-                            <div class="form-group form-group-required col-lg-11">
+                            <div class="form-group form-group-required formHeadings col-lg-11">
                                 <label for="recipeMethod" class="control-label">Method</label>
                                 <small id="imageHelpBlock" class="form-text text-info">
                                         Write each step of the recipe method on one line. Once written, highlight text and
@@ -67,19 +67,19 @@
                                 
                             </div>
 
-                            <div class="form-group form-group-required col-lg-11">
+                            <div class="form-group form-group-required formHeadings col-lg-11">
                                 <label for="prepTime" class="control-label">Prep time (in minutes)</label>
                                 <input type="number" class="form-control" id="prepTime" name="prepTime"
                                     placeholder="Time in minutes" required>
                             </div>
 
-                            <div class="form-group form-group-required col-lg-11">
+                            <div class="form-group form-group-required formHeadings col-lg-11">
                                 <label for="cookTime" class="control-label">Cook time (in minutes)</label>
                                 <input type="number" class="form-control" id="cookTime" name="cookTime"
                                     placeholder="Time in minutes" required>
                             </div>
 
-                            <div class="form-group form-group-required col-lg-3">
+                            <div class="form-group form-group-required formHeadings col-lg-3">
                                 <label for="recipeDifficulty" class="control-label">Difficulty level</label>
                                 <select id="recipeDifficulty" name="recipeDifficulty" class="form-control" required>
                                     <option selected>Choose...</option>
@@ -89,18 +89,18 @@
                                 </select>
                             </div>
 
-                            <div class="form-group form-group-required col-lg-3">
+                            <div class="form-group form-group-required formHeadings col-lg-3">
                                 <label for="recipeServes" class="control-label">How many people does this recipe
                                     serve?</label>
                                 <input type="number" class="form-control" id="recipeServes" name="recipeServes"
                                     placeholder="Number of servings" required>
                             </div>
 
-                            <div class="form-group col-lg-11">
+                            <div class="form-group formHeadings col-lg-11">
                                 <label for="dietType">Diet type</label><br />
                                 <small id="dietTypeHelpBlock" class="form-text text-info">
                                         Select all that apply
-                                    </small>
+                                </small>
                                 <label class="checkbox-inline">
                                     <input type="checkbox" name="dietType" id="dietType" value="Dairy-free">Dairy-free
                                 </label>
@@ -137,7 +137,7 @@
                                 </label>
                             </div>
 
-                            <div class="form-group form-group-required col-lg-3">
+                            <div class="form-group form-group-required formHeadings col-lg-3">
                                 <label for="cuisineType" class="control-label">Cuisine type</label>
                                 <select id="cuisineType" name="cuisineType" class="form-control" required>
                                     <option>African</option>
@@ -152,7 +152,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-lg-11">
+                            <div class="form-group formHeadings col-lg-11">
                                 <label for="recipeNotes">Notes</label>
                                 <textarea class="form-control richTextEditor" id="recipeNotes" name="recipeNotes"
                                     rows="3"

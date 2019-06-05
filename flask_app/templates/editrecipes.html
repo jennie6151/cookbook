@@ -26,12 +26,12 @@
                             {% for item in recipe %}
                             <input type="text" name="_id" value="{{ item['_id'] }}" hidden>
 
-                            <div class="form-group form-group-required col-lg-4">
+                            <div class="form-group form-group-required formHeadings col-lg-4">
                                 <label for="username" class="control-label">Username</label>
                                 <input type="text" class="form-control form-control-lg" id="username" name="username"
                                     value="{{ item['username'] }}" required> </div>
 
-                            <div class="form-group form-group-required col-lg-8">
+                            <div class="form-group form-group-required formHeadings col-lg-8">
                                 <label for="recipeTitle" class="control-label">Recipe title</label>
                                 <small id="titleHelpBlock" class="form-text text-info">
                                         Include the name of the dish and/or it's main ingredient. Keep this
@@ -41,17 +41,17 @@
                                     name="recipeTitle" value="{{ item['recipeTitle'] }}" required>
                             </div>
 
-                            <div class="form-group col-lg-8">
+                            <div class="form-group form-group-required formHeadings col-lg-8">
+                                    <label class="control-label" for="recipeImage">Choose an image of the recipe</label>
                                     <small id="imageHelpBlock" class="form-text text-info">
-                                            Remember you eat with your eyes first; so add a good 600x600px jpg or
+                                            Remember you eat with your eyes first; so add a good 3000x250px jpg or
                                             png
                                         </small>
                                 <input type="file" class="" id="recipeImage" name="recipeImage">
-                                <label class="" for="recipeImage">Choose an image of the recipe</label>
                                 
                             </div>
 
-                            <div class="form-group form-group-required col-lg-11">
+                            <div class="form-group form-group-required formHeadings col-lg-11">
                                 <label for="recipeIngredients" class="control-label">Ingredients</label>
                                 <small id="imageHelpBlock" class="form-text text-info">
                                         Write each ingredient on one line. Once written, highlight text and click on the
@@ -62,7 +62,7 @@
                                     required>{{ item['recipeIngredients'] }}</textarea>
                             </div>
 
-                            <div class="form-group form-group-required col-lg-11">
+                            <div class="form-group form-group-required formHeadings col-lg-11">
                                 <label for="recipeMethod" class="control-label">Method</label>
                                 <small id="imageHelpBlock" class="form-text text-info">
                                         Write each step of the recipe method on one line. Once written, highlight text and
@@ -72,19 +72,19 @@
                                     value="{{ item['recipeMethod'] }}" required>{{ item['recipeMethod'] }}</textarea>
                             </div>
 
-                            <div class="form-group form-group-required col-lg-11">
+                            <div class="form-group form-group-required formHeadings col-lg-11">
                                 <label for="prepTime" class="control-label">Prep time</label>
                                 <input type="text" class="form-control" id="prepTime" name="prepTime"
                                     value="{{ item['prepTime'] }}" required>
                             </div>
 
-                            <div class="form-group form-group-required col-lg-11">
+                            <div class="form-group form-group-required formHeadings col-lg-11">
                                 <label for="cookTime" class="control-label">Cook time</label>
                                 <input type="text" class="form-control" id="cookTime" name="cookTime"
                                     value="{{ item['cookTime'] }}" required>
                             </div>
 
-                            <div class="form-group form-group-required col-lg-3">
+                            <div class="form-group form-group-required formHeadings col-lg-3">
                                 <label for="recipeDifficulty" class="control-label">Difficulty level</label>
                                 <select id="recipeDifficulty" name="recipeDifficulty" class="form-control" required>
                                     <option {% if item['recipeDifficulty'] =='Beginner' %} selected {% endif %}>
@@ -96,7 +96,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group form-group-required col-lg-3">
+                            <div class="form-group form-group-required formHeadings col-lg-3">
                                 <label for="recipeServes" class="control-label">How many people does this
                                     recipe
                                     serve?</label>
@@ -104,7 +104,7 @@
                                     value="{{ item['recipeServes'] }}" required>
                             </div>
 
-                            <div class="form-group col-lg-11">
+                            <div class="form-group formHeadings col-lg-11">
                                 <label for="dietType">Diet type</label><br />
                                 <small id="dietTypeHelpBlock" class="form-text text-info">
                                         Select all that apply
@@ -155,7 +155,7 @@
                                 </label>
                             </div>
 
-                            <div class="form-group form-group-required col-lg-3">
+                            <div class="form-group form-group-required formHeadings col-lg-3">
                                 <label for="cuisineType" class="control-label">Cuisine type</label>
                                 <select id="cuisineType" name="cuisineType" class="form-control" required>
                                     <option {% if item['cuisineType'] =='African' %} selected {% endif %}>
@@ -187,7 +187,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-lg-11">
+                            <div class="form-group formHeadings col-lg-11">
                                 <label for="recipeNotes">Notes</label>
                                 <textarea class="form-control" id="recipeNotes" name="recipeNotes" rows="3"
                                     value="{{ item['recipeNotes'] }}">{{ item['recipeNotes'] }}</textarea>
