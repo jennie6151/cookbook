@@ -64,6 +64,7 @@
                 <img class="recipeImageStyling" src="{{url_for('file', filename=recipe['recipeImage'])}}">
                     <h5 class="card-title text-truncate">{{ recipe["recipeTitle"] }}</h5>
                 <h6 class="text-muted">Serves: {{ recipe["recipeServes"] }}</h6>
+                <h6 class="text-muted">Recipe likes: {{ recipe["like"] }}</h6>
                 <a href="./viewRecipes?_id={{ recipe['_id'] }}" class="btn btn-info btn-block">See recipe</a>
               </div>
             </div>

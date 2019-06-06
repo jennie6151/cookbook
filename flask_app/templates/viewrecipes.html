@@ -20,12 +20,17 @@
                                 src="{{url_for('file', filename=item['recipeImage'])}}"
                                 class="rounded recipeImageStyling" alt="Recipe photo"></div>
                         <div class="col-lg-5 col-md-4 col-12">
+                                <h4 class="recipe-subtitles">Recipe information</h4>
                             <ul class="recipe-facts">
                                 <li>Prep time: {{ item["prepTime"] }}</li>
                                 <li>Cook time: {{ item["cookTime"] }}</li>
                                 <li>Difficulty: {{ item["recipeDifficulty"] }}</li>
                                 <li>Serves: {{ item["recipeServes"] }}</li>
                             </ul>
+                            <h4 class="recipe-subtitles">Recipe stats</h4>
+                            <p class="recipe-facts">
+                                Number of likes: {{ item["like"] }}
+                            </p>
                         </div>
                         <div class="col-lg-4 col-md-4 col-12">
                             <h4 class="recipe-subtitles">Diet Type</h4>
@@ -38,6 +43,7 @@
                             <p class="recipe-facts">
                                 {{ item["cuisineType"] }}
                             </p>
+                            
                         </div>
                     </div>
                 </div>
