@@ -51,14 +51,14 @@
         </select>
       </div>
 
-      <a href="#" class="btn btn-success" role="button">Add a recipe</a>
+      
     </section>
 
     <div>
       <div class="container">
         <div class="row">
           {% for recipe in pageRecipes %}
-          <div class="col-md-4 col-sm-6">
+          <div class="col-sm-6 col-lg-4">
             <div class="card card-styling">
               <div class="card-body">
                 <img class="recipeImageStyling" src="{{url_for('file', filename=recipe['recipeImage'])}}">

@@ -15,28 +15,13 @@
 
 <body>
     <header>
-        <div class="collapse bg-dark" id="navbarHeader">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 py-4">
-                        <h4 class="text-white">About us</h4>
-                        <p class="text-muted">I am starving! started from just one busy, full-time girl needing to make
-                            good food, fast. It is now a worldwide hub for all things tasty.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="navbar navbar-dark bg-dark box-shadow">
-            <div class="container d-flex justify-content-between">
-                <a href="index.html" class="navbar-brand d-flex align-items-center">
-                    <strong>I am starving!</strong>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
-                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>
+            <nav class="navbar navbar-dark bg-dark justify-content-between">
+                    <a class="navbar-brand" href=".\#">I am starving!</a>
+                    <form class="form-inline">
+                            <a href=".\addRecipes" class="btn btn-success my-2 my-sm-0" role="button">Add a recipe</a>
+                     
+                    </form>
+                  </nav>
     </header>
     {% block content %}
     {% endblock %}
