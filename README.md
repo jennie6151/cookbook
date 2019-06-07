@@ -76,12 +76,19 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
     * Code editor used to write above code
 * [JQuery](https://jquery.com/)
     *
-* [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/)
+* [mongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+    *database program used
+* [Summernote](https://summernote.org/)
+    *Rich text editor for addrecipes.html and editrecipes.html forms
+* [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
     * Web framework used to help style this single page application
-* [Github](https://github.com/)
-    * Platform used to host my versioning
+* [BBC Good Food](https://www.bbcgoodfood.com/)
+    *Used for the recipes (so I didn't have to channel my inner Delia Smith)
+* [Git](https://git-scm.com/)
+    * Used for version control
 * [Heroku](https://www.heroku.com/)
-* Other resources used: [Fontawesome v5.7.2](https://fontawesome.com/), [Googlefonts](https://fonts.google.com/)
+    * Platform used to host my versioning
+* Other resources used: [Fontawesome v5.7.2](https://fontawesome.com/)
 
 <a name="testing"></a>
 ## Testing

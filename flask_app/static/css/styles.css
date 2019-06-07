@@ -15,6 +15,10 @@
     font-weight:bold;
 }
 
+.checkboxStyling{
+    margin:2px;
+}
+
 .recipe-title {
     color:#bada55;
     margin-top: 30px;
@@ -39,7 +43,14 @@
     margin-top: 20px;
 }
 
+.buttonStyling{
+    margin:15px;
+    width:180px;
+}
 
+.iconStyling{
+    margin:8px;
+}
 
 .footer-styling {
     position: relative;

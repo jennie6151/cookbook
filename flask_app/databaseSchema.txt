@@ -2,7 +2,7 @@
 "Id": "Number",
 "username": "String",
 "recipeTitle": "String",
-"customFile":
+"recipeImage": "File"
 "recipeIngredients": "String",
 "recipeMethod": "String",
 "prepTime": "Number",
@@ -11,5 +11,6 @@
 "recipeServes": "Number",
 "dietType": ["dietType_1","dietType_2"],
 "cuisineType": ["cuisineType_1","cuisineType_2"],
-"recipeNotes": "String"
+"recipeNotes": "String",
+"likes": "Number"
 }
