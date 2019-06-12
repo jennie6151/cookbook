@@ -19,7 +19,7 @@ This project is licensed under the MIT License - see the [license.txt](license.t
 <a name="overview"></a>
 ## Overview
 ### What is this website for?
-This is a site that allows users to search and add recipes.
+This is a site that allows users to create, read, update and delete recipes.
 
 ### What does this website do?
 This website is motivated by the brief provided by [The Code Institute](https://codeinstitute.net/) and uses the criteria supplied. It was imperative that I create a site that helps users to:
@@ -83,7 +83,7 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
 * [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
     * Web framework used to help style this single page application
 * [BBC Good Food](https://www.bbcgoodfood.com/)
-    *Used for the recipes (so I didn't have to channel my inner Delia Smith)
+    *Used for the recipe content (so I didn't have to channel my inner Delia Smith)
 * [Git](https://git-scm.com/)
     * Used for version control
 * [Heroku](https://www.heroku.com/)
@@ -119,7 +119,6 @@ I used **Git** for versioning on this project. And hosted this on Heroku.
 ## Acknowledgments/credits
 * *Antonija Šimić* - mentor.
 * *Paul Lewis* - colleague (Software Developer) who tested my finished site.
-* WEBSITE USED FOR RECIPES
 
 ##Commands to remember
 cmd.exe

@@ -26,7 +26,7 @@ def search():
         recipe = Recipes.find({refer: ObjectId(recipeSearch)})
     else:
         results = Recipes.find(
-            {'recipeTitle': {'$regex': '/.*'+recipeSearch+'.*/'}})
+            {'recipeTitle': {'$regex': '.*'+recipeSearch+'.*'}})
     return render_template('searchresults.html', searchResults=results)
 
 
