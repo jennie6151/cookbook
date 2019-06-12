@@ -3,6 +3,7 @@ from bson import ObjectId
 from flask_pymongo import PyMongo
 import os
 import random
+import re
 
 app = Flask(__name__)
 
@@ -25,8 +26,8 @@ def search():
     if(recipeSearch == "_id"):
         recipe = Recipes.find({refer: ObjectId(recipeSearch)})
     else:
-        results = Recipes.find(
-            {'recipeTitle': {'$regex': '.*'+recipeSearch+'.*'}})
+        results = Recipes.find({'recipeTitle': {'$regex': '.*'+recipeSearch+'.*', '$options' : 'i'}})
+
     return render_template('searchresults.html', searchResults=results)
 
 
