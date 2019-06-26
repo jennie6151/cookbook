@@ -25,9 +25,9 @@ This is a site that allows users to create, read, update and delete recipes.
 This website is motivated by the brief provided by [The Code Institute](https://codeinstitute.net/) and uses the criteria supplied. It was imperative that I create a site that helps users to:
 * Search a recipe
 * Filter these recipes by specific criteria
-* Add their own recipes
-* Edit their own recipes
-* Delete their own recipes
+* Add recipes
+* Edit recipes
+* Delete recipes
 
 ### How does it work?
 This website uses **MongoDB** which is a NoSQL document-oriented database program.

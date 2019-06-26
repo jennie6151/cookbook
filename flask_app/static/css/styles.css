@@ -1,3 +1,21 @@
+.main{
+    width: 50%;
+    margin: 50px auto;
+}
+
+.has-search .searchBarStyling {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 80%;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+
 .card-styling {
     margin:10px;
     width: 100%;
