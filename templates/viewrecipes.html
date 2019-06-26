@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>I am starving!</title>
+</head>
+
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+    <main role="main">
+        <div class="container">
+            {% for item in recipe %}
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="recipe-title">{{ item["recipeTitle"] }}</h1>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-8"><img
+                                src="{{url_for('file', filename=item['recipeImage'])}}"
+                                class="rounded recipeImageStyling" alt="Recipe photo"></div>
+
+                        <div class="col-lg-5 col-md-4 col-12">
+                            <h4 class="recipe-subtitles">Recipe information</h4>
+                            <ul class="recipe-facts">
+                                <li>Prep time: {{ item["prepTime"] }}</li>
+                                <li>Cook time: {{ item["cookTime"] }}</li>
+                                <li>Difficulty: {{ item["recipeDifficulty"] }}</li>
+                                <li>Serves: {{ item["recipeServes"] }}</li>
+                            </ul>
+                            <h4 class="recipe-subtitles">Recipe stats</h4>
+                            <p class="recipe-facts">
+                                Number of likes: {{ item["like"] }}
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <h4 class="recipe-subtitles">Diet Type</h4>
+                            <ul class="recipe-facts">
+                                {%for dietTypeOption in item["dietType"]%}
+                                <li>{{ dietTypeOption }}</li>
+                                {%endfor%}
+                            </ul>
+                            <h4 class="recipe-subtitles">Cuisine</h4>
+                            <p class="recipe-facts">
+                                {{ item["cuisineType"] }}
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-lg-6">
+                    <h4 class="recipe-subtitles">Ingredients</h4>
+                    {{ item["recipeIngredients"]|safe }}
+                </div>
+                <div class="col-xs-12 col-lg-6">
+                    <h4 class="recipe-subtitles">Method</h4>
+                    {{ item["recipeMethod"]|safe }}
+
+                </div>
+
+                <div class="col-lg-12">
+                    <h4 class="recipe-subtitles">Notes</h4>
+                    <p class="recipe-facts">{{ item["recipeNotes"]|safe }}</p>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-12">
+                        <h4 class="recipe-subtitles">Actions</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <form action="/like" method="POST">
+                        <button class="btn btn-primary buttonStyling" type="submit"><i
+                                class="fas fa-smile iconStyling"></i>Like
+                            this recipe</a>
+                            <input type="text" name="_id" value="{{ item['_id'] }}" hidden>
+                    </form>
+                </div>
+              
+                <div class="col-lg-2">
+                    <a href="./edit?_id={{ item['_id'] }}"><button type="submit"
+                            class="btn btn-warning buttonStyling"><i class="fas fa-edit iconStyling"></i>Edit
+                            recipe</button></a>
+                </div>
+                <div class="col-lg-2">
+                        <a href="./remove?_id={{ item['_id'] }}"><button type="submit" class="btn btn-danger buttonStyling"
+                                onclick="return confirm('Are you sure you want to delete this recipe?');"><i
+                                    class="fas fa-trash iconStyling"></i>Delete
+                                recipe</button></a>
+                    </div>
+
+            </div>
+        </div>
+
+        {%endfor%}
+
+        </div>
+        </div>
+
+
+
+    </main>
+
+    {% endblock %}
+</body>
+
+</html>
