@@ -126,5 +126,5 @@ def file(filename):
     return mongo.send_file(filename)
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True)
