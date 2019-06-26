@@ -32,11 +32,13 @@ This website is motivated by the brief provided by [The Code Institute](https://
 ### How does it work?
 This website uses **MongoDB** which is a NoSQL document-oriented database program.
 
-The site uses plain **HTML** and **CSS** to route users to search and filter recipes which, depending on their search style, controls which **JavaScript** to execute.
+The site uses **HTML** and **CSS** to route users to search and filter recipes which, depending on their search style, controls which **Python** command runs.
 
-The app relies on **JavaScript** and **JQuery** to search, filter and display the user results.
+**Flask** has been used as the presentation engine to process data from the database to show it on screen. 
 
-**Python** **Flask**
+**Json** and **Bson** are dependencies used and added by **Pymongo**. **Jinga** is a dependency used by **Flask**.
+
+**Pymongo**
 
 The site is styled with **Bootstrap** and I have made the site responsive so users can use this application whilst on the go.
 
