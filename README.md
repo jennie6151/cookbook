@@ -30,32 +30,23 @@ This website is motivated by the brief provided by [The Code Institute](https://
 * Delete recipes
 
 ### How does it work?
-This website uses **MongoDB** which is a NoSQL document-oriented database program.
 
 The site uses **HTML** and **CSS** to route users to search and filter recipes which, depending on their search style, controls which **Python** command runs.
 
 **Flask** has been used as the presentation engine to process data from the database to show it on screen. 
 
-**Json** and **Bson** are dependencies used and added by **Pymongo**. **Jinga** is a dependency used by **Flask**.
+This website uses **MongoDB** which is a NoSQL document-oriented database program.
 
-**Pymongo**
+**Pymongo** is the **Python** library used for accessing the data in **MongoDB**.
+
+**Json** and **Bson** are dependencies used and added by **Pymongo**. **Jinga** is a dependency used by **Flask**.
 
 The site is styled with **Bootstrap** and I have made the site responsive so users can use this application whilst on the go.
 
 <a name="deploy"></a>
-## Deployment - AMENDMENTS REQUIRED FOR HEROKU. PLACEHOLDER ONLY.
-1. Enable GitHub Pages on GitHub settings.
-2. Select Master Branch
-3. GitHub URL is then produced. Copy this.
-4. If deploying to own infrastructure replace api key with your own on index.html.
-5. Add copied URL to Google API Console. Both the Google Maps and Google Places API need to be enabled.
-5.1 Go to Google Cloud Platform Console
-5.2 Select project
-5.3 Select 'APIs'
-5.4 Select API under 'Enabled APIs'
-5.5 Select 'Credentials'
-5.6 Select relevent API key
-5.7 Scroll to 'Accept requests from these HTTP referrers (web sites)' and add copied URL.
+## Deployment
+I have used the automated deployment engine on Heroku which gets triggered by a push/sync.
+
 
 <a name="features"></a>
 ## Features
@@ -72,12 +63,10 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
 ## Technology used
 * [Balsamiq](https://balsamiq.com/)
     * Used to create mock ups of the site which have been uploaded as PDF files
-* **Html**, **CSS** and **JavaScript**
+* **Html** and **CSS**
     * Base languages used to create the site
 * [Visual Studio Code]
     * Code editor used to write above code
-* [JQuery](https://jquery.com/)
-    *
 * [mongoDB Atlas](https://www.mongodb.com/cloud/atlas)
     *database program used
 * [Summernote](https://summernote.org/)
@@ -88,8 +77,10 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
     *Used for the recipe content (so I didn't have to channel my inner Delia Smith)
 * [Git](https://git-scm.com/)
     * Used for version control
+*[Github](https://github.com/)
+    * Used as hosting platform for git
 * [Heroku](https://www.heroku.com/)
-    * Platform used to host my versioning
+    * Platform used to host website
 * Other resources used: [Fontawesome v5.7.2](https://fontawesome.com/)
 
 <a name="testing"></a>
@@ -115,12 +106,13 @@ As a user I want to...
 
 <a name="version"></a>
 ## Versioning
-I used **Git** for versioning on this project. And hosted this on Heroku.
+I used **Git** for versioning on this project, hosted git on github. Hosted website on Heroku.
 
 <a name="credits"></a>
 ## Acknowledgments/credits
-* *Antonija Šimić* - mentor.
+* *Antonija Šimić* - Code Institute mentor.
 * *Paul Lewis* - colleague (Software Developer) who tested my finished site.
+* *Haley Schafer* - Code Institute tutor. For help with deployment to Heroku.
 
 ##Commands to remember
 cmd.exe
