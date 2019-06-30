@@ -18,7 +18,15 @@
                                 recipe using this form.</small></h1>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                            <div class="form-group col-lg-4">
+                                    <button class="btn btn-info" type="submit">Back to recipe</button>
+                            </div>
+                    </div>
+                </div>
             </div>
+
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -34,42 +42,44 @@
                             <div class="form-group form-group-required col-lg-8">
                                 <label for="recipeTitle" class="control-label formHeadings">Recipe title</label>
                                 <small id="titleHelpBlock" class="form-text text-info">
-                                        Include the name of the dish and/or it's main ingredient. Keep this
-                                        short
-                                    </small>
+                                    Include the name of the dish and/or it's main ingredient. Keep this
+                                    short
+                                </small>
                                 <input type="text" class="form-control form-control-lg" id="recipeTitle"
                                     name="recipeTitle" value="{{ item['recipeTitle'] }}" required>
                             </div>
 
                             <div class="form-group form-group-required col-lg-8">
-                                    <label class="control-label formHeadings" for="recipeImage">Choose an image of the recipe</label>
-                                    <small id="imageHelpBlock" class="form-text text-info">
-                                            Remember you eat with your eyes first; so add a good 3000x250px jpg or
-                                            png
-                                        </small>
+                                <label class="control-label formHeadings" for="recipeImage">Choose an image of the
+                                    recipe</label>
+                                <small id="imageHelpBlock" class="form-text text-info">
+                                    Remember you eat with your eyes first; so add a good 3000x250px jpg or
+                                    png
+                                </small>
                                 <input type="file" class="" id="recipeImage" name="recipeImage">
-                                
+
                             </div>
 
                             <div class="form-group form-group-required col-lg-11">
                                 <label for="recipeIngredients" class="control-label formHeadings">Ingredients</label>
                                 <small id="imageHelpBlock" class="form-text text-info">
-                                        Write each ingredient on one line. Once written, highlight text and click on the
-                                        bullet point icon (unordered list).
-                                    </small>
-                                <textarea class="form-control richTextEditor" id="recipeIngredients" name="recipeIngredients" rows="5"
-                                    value="{{ item['recipeIngredients'] }}"
+                                    Write each ingredient on one line. Once written, highlight text and click on the
+                                    bullet point icon (unordered list).
+                                </small>
+                                <textarea class="form-control richTextEditor" id="recipeIngredients"
+                                    name="recipeIngredients" rows="5" value="{{ item['recipeIngredients'] }}"
                                     required>{{ item['recipeIngredients'] }}</textarea>
                             </div>
 
                             <div class="form-group form-group-required col-lg-11">
                                 <label for="recipeMethod" class="control-label formHeadings">Method</label>
                                 <small id="imageHelpBlock" class="form-text text-info">
-                                        Write each step of the recipe method on one line. Once written, highlight text and
-                                        click on the numbered list icon (ordered list).
-                                    </small>
-                                <textarea class="form-control richTextEditor" id="recipeMethod" name="recipeMethod" rows="5"
-                                    value="{{ item['recipeMethod'] }}" required>{{ item['recipeMethod'] }}</textarea>
+                                    Write each step of the recipe method on one line. Once written, highlight text and
+                                    click on the numbered list icon (ordered list).
+                                </small>
+                                <textarea class="form-control richTextEditor" id="recipeMethod" name="recipeMethod"
+                                    rows="5" value="{{ item['recipeMethod'] }}"
+                                    required>{{ item['recipeMethod'] }}</textarea>
                             </div>
 
                             <div class="form-group form-group-required col-lg-11">
@@ -85,7 +95,8 @@
                             </div>
 
                             <div class="form-group form-group-required col-lg-3">
-                                <label for="recipeDifficulty" class="control-label formHeadings">Difficulty level</label>
+                                <label for="recipeDifficulty" class="control-label formHeadings">Difficulty
+                                    level</label>
                                 <select id="recipeDifficulty" name="recipeDifficulty" class="form-control" required>
                                     <option {% if item['recipeDifficulty'] =='Beginner' %} selected {% endif %}>
                                         Beginner</option>
@@ -107,8 +118,8 @@
                             <div class="form-group col-lg-11">
                                 <label class="formHeadings" for="dietType">Diet type</label><br />
                                 <small id="dietTypeHelpBlock" class="form-text text-info">
-                                        Select all that apply
-                                    </small>
+                                    Select all that apply
+                                </small>
                                 <label class="checkbox-inline checkboxStyling">
                                     <input type="checkbox" id="dietType" name="dietType" value="Dairy-free"
                                         {% if 'Dairy-free' in item['dietType'] %} checked {% endif %}>Dairy-free
@@ -189,8 +200,8 @@
 
                             <div class="form-group col-lg-11">
                                 <label class="formHeadings" for="recipeNotes">Notes</label>
-                                <textarea class="form-control richTextEditor" id="recipeNotes" name="recipeNotes" rows="3"
-                                    value="{{ item['recipeNotes'] }}">{{ item['recipeNotes'] }}</textarea>
+                                <textarea class="form-control richTextEditor" id="recipeNotes" name="recipeNotes"
+                                    rows="3" value="{{ item['recipeNotes'] }}">{{ item['recipeNotes'] }}</textarea>
                             </div>
                             {% endfor %}
                             <div class="form-group col-lg-4">

@@ -44,8 +44,9 @@ This website uses **MongoDB** which is a NoSQL document-oriented database progra
 The site is styled with **Bootstrap** and I have made the site responsive so users can use this application whilst on the go.
 
 <a name="deploy"></a>
-## Deployment
-I have used the automated deployment engine on Heroku which gets triggered by a push/sync.
+### Deployment
+
+* I have used the automated deployment engine on Heroku which gets triggered by a push/sync.
 
 
 <a name="features"></a>
@@ -98,15 +99,20 @@ I have used the automated deployment engine on Heroku which gets triggered by a 
 
 ## User stories as part of testing
 As a user I want to...
-1. search 'x' and find EXAMPLE1. Test performed and true.
-2. search 'x' and find EXAMPLE1 and click on a result and it... . Test performed and true.
-3. search 'x' and find EXAMPLE1 and then change type to x and my search to be updated. Test performed and true.
-4. search 'x' and find EXAMPLE1 and then type 'EXAMPLE2' and my search to be updated. Test performed and true.
-5. search 'x' and find no results for any search. Test performed and true.
+1. search 'chicken' and find five recipes. Test performed and true.
+2. search 'Lankan' and find 1 recipe of 'Sri Lankan fried chicken' and click on the result and it to open the recipe page. Test performed and true.
+3. search 'pizza' and find 'Fresh topped pizza' and then from the Search Results page type 'BBQ' and my search to be updated. Test performed and true.
+4. search 'frog' and find 0 recipes and a warning message. Test performed and true.
+5. click on "Vegan" from the dropdown filter and see the results limit. Test performed and true.
+6. click on the 'Add recipe' button and be able to add a recipe and for the mandatory fields to stop form submission if not completed. Recipe to appear on the index page in a new card. Test performed and true.
+7. from any chosen recipe click 'Like recipe' button and for the 'Recipe likes:' to update on the recipe and on the homepage card. Test performed and true.
+8. from any chosen recipe click 'Edit recipe' button and to be taken to the edit page, make changes and for these to be reflected in recipe and index pages. Test performed and true.
+9. from any chosen recipe click 'Delete recipe' button and a confirmation pop up to appear, on clicking OK the recipe will be removed from the website and database. Test performed and true.
+
 
 <a name="version"></a>
 ## Versioning
-I used **Git** for versioning on this project, hosted git on github. Hosted website on Heroku.
+I used **Git** for versioning on this project, hosted **Git** on **Github**. Hosted website on **Heroku**.
 
 <a name="credits"></a>
 ## Acknowledgments/credits
