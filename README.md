@@ -18,6 +18,7 @@ This project is licensed under the MIT License - see the [license.txt](license.t
 
 <a name="overview"></a>
 ## Overview
+
 ### What is this website for?
 This is a site that allows users to create, read, update and delete recipes.
 
@@ -50,6 +51,7 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
 
 <a name="features"></a>
 ## Features
+
 * Eye catching index page
 * Large easy to see and use search box
 * Clear search results with specific criteria to further filter by
@@ -61,6 +63,7 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
 
 <a name="tech"></a>
 ## Technology used
+
 * [Balsamiq](https://balsamiq.com/)
     * Used to create mock ups of the site which have been uploaded as PDF files
 * **Html** and **CSS**
@@ -68,13 +71,13 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
 * [Visual Studio Code]
     * Code editor used to write above code
 * [mongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-    * database program used
+    * Database program used
 * [Summernote](https://summernote.org/)
     * Rich text editor for addrecipes.html and editrecipes.html forms
 * [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
     * Web framework used to help style this single page application
 * [BBC Good Food](https://www.bbcgoodfood.com/)
-    * Used for the recipe content (so I didn't have to channel my inner Delia Smith)
+    * Used for all recipe content (so I didn't have to channel my inner Delia Smith)
 * [Git](https://git-scm.com/)
     * Used for version control
 *[Github](https://github.com/)
@@ -85,6 +88,8 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
 
 <a name="testing"></a>
 ## Testing
+
+* Used "TypeError:" as a debugger to catch when one of the operands or arguments passed to a function was incompatible with the type expected.
 * HTML code checked via a [HTML code validator](https://validator.w3.org/)
 * CSS code checked via a [CSS code validator](https://jigsaw.w3.org/css-validator/)
 * Asked colleagues, friends and family to check this site and access from their own devices; any small changes were made and committed.
@@ -119,7 +124,7 @@ I used **Git** for versioning on this project, hosted **Git** on **Github**. Hos
 * *Paul Lewis* - colleague (Software Developer) who tested my finished site.
 * *Haley Schafer* - Code Institute tutor. For help with deployment to Heroku.
 
-##Commands to remember
+## Commands to remember
 * cmd.exe
 * cd flask_app
 * py -m venv env
