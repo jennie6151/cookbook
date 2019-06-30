@@ -30,7 +30,6 @@ This website is motivated by the brief provided by [The Code Institute](https://
 * Delete recipes
 
 ### How does it work?
-
 The site uses **HTML** and **CSS** to route users to search and filter recipes which, depending on their search style, controls which **Python** command runs.
 
 **Flask** has been used as the presentation engine to process data from the database to show it on screen. 
@@ -44,7 +43,7 @@ This website uses **MongoDB** which is a NoSQL document-oriented database progra
 The site is styled with **Bootstrap** and I have made the site responsive so users can use this application whilst on the go.
 
 <a name="deploy"></a>
-### Deployment
+## Deployment
 
 * I have used the automated deployment engine on Heroku which gets triggered by a push/sync.
 
@@ -69,13 +68,13 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
 * [Visual Studio Code]
     * Code editor used to write above code
 * [mongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-    *database program used
+    * database program used
 * [Summernote](https://summernote.org/)
-    *Rich text editor for addrecipes.html and editrecipes.html forms
+    * Rich text editor for addrecipes.html and editrecipes.html forms
 * [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
     * Web framework used to help style this single page application
 * [BBC Good Food](https://www.bbcgoodfood.com/)
-    *Used for the recipe content (so I didn't have to channel my inner Delia Smith)
+    * Used for the recipe content (so I didn't have to channel my inner Delia Smith)
 * [Git](https://git-scm.com/)
     * Used for version control
 *[Github](https://github.com/)
@@ -121,10 +120,10 @@ I used **Git** for versioning on this project, hosted **Git** on **Github**. Hos
 * *Haley Schafer* - Code Institute tutor. For help with deployment to Heroku.
 
 ##Commands to remember
-cmd.exe
-cd flask_app
-py -m venv env
-env\Scripts\activate
-set FLASK_ENV=development
+* cmd.exe
+* cd flask_app
+* py -m venv env
+* env\Scripts\activate
+* set FLASK_ENV=development
 
 #### *MIT © 2019 Jennifer Dick*
