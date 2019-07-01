@@ -3,8 +3,15 @@
     margin: 50px auto;
 }
 
+@media only screen and (max-width: 992px) {
+    .main {
+      width:100%;
+    }
+  }
+
 .jumbotronStyling{
 color:#343a40;
+
 }
 
 /**---------------- Search ---------------**/
@@ -21,13 +28,13 @@ color:#343a40;
     color: #aaa;
 }
 
-.recipeSearch{
-    margin:10px;
-    width:80%;
+.searchButtonStyling{
+    margin:5px;
+    width: 80%;
 }
 
 /**---------------- Recipe cards ---------------**/
-.card-styling {
+.cardStyling {
     margin:10px;
     width: 100%;
     text-overflow: ellipsis;
@@ -66,7 +73,7 @@ color:#343a40;
     margin:25px;
 }
 
-.recipe-title {
+.recipeTitle {
     color:#bada55;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -79,13 +86,13 @@ color:#343a40;
     object-fit: cover;
 }
 
-.recipe-facts {
+.recipeFacts {
     margin: 12px;
     line-height: 35px;
     font-size: 20px;
 }
 
-.recipe-subtitles {
+.recipeSubtitles {
     color:#bada55;
     margin-top: 20px;
 }
@@ -101,7 +108,7 @@ color:#343a40;
 
 /**---------------- Footer ---------------**/
 
-.footer-styling {
+.footerStyling {
     position: sticky;
     bottom: 0;
     width: 100%;

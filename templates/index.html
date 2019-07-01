@@ -26,7 +26,7 @@
             <input type="text" id="recipeSearch" name="recipeSearch" class="form-control"
               placeholder="Ingredient, dish, keyword..." />
           </div>
-          <div><button type="submit" class="btn btn-dark">Search</button></div>
+          <div><button type="submit" class="btn btn-info searchButtonStyling">Search</button></div>
         </form>
 
       </div>
@@ -62,9 +62,9 @@
         <div class="row">
           {% for recipe in pageRecipes %}
           <div class="col-sm-6 col-lg-4">
-            <div class="card card-styling">
+            <div class="card cardStyling">
               <div class="card-body">
-                <img class="recipeImageStyling" src="{{url_for('file', filename=recipe['recipeImage'])}}">
+                <img class="recipeImageStyling" src="{{url_for('file', filename=recipe['recipeImage'])}}" alt="{{recipe['recipeTitle']}}">
                 <h5 class="card-title text-truncate">{{ recipe["recipeTitle"] }}</h5>
                 <h6 class="text-muted">Serves: {{ recipe["recipeServes"] }}</h6>
                 <h6 class="text-muted">Recipe likes: {{ recipe["like"]|default("0") }}</h6>

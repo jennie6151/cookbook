@@ -14,34 +14,34 @@
             {% for item in recipe %}
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="recipe-title">{{ item["recipeTitle"] }}</h1>
+                    <h1 class="recipeTitle">{{ item["recipeTitle"] }}</h1>
                     <div class="row">
                         <div class="col-lg-3 col-md-4 col-8"><img
                                 src="{{url_for('file', filename=item['recipeImage'])}}"
-                                class="rounded recipeImageStyling" alt="Recipe photo"></div>
+                                class="rounded recipeImageStyling" alt="{{recipe['recipeTitle']}}"></div>
 
                         <div class="col-lg-5 col-md-4 col-12">
-                            <h4 class="recipe-subtitles">Recipe information</h4>
-                            <ul class="recipe-facts">
+                            <h4 class="recipeSubtitles">Recipe information</h4>
+                            <ul class="recipeFacts">
                                 <li>Prep time: {{ item["prepTime"] }}</li>
                                 <li>Cook time: {{ item["cookTime"] }}</li>
                                 <li>Difficulty: {{ item["recipeDifficulty"] }}</li>
                                 <li>Serves: {{ item["recipeServes"] }}</li>
                             </ul>
-                            <h4 class="recipe-subtitles">Recipe stats</h4>
-                            <p class="recipe-facts">
+                            <h4 class="recipeSubtitles">Recipe stats</h4>
+                            <p class="recipeFacts">
                                 Recipe likes: {{ item["like"]|default("0") }}
                             </p>
                         </div>
                         <div class="col-lg-4 col-md-4 col-12">
-                            <h4 class="recipe-subtitles">Diet Type</h4>
-                            <ul class="recipe-facts">
+                            <h4 class="recipeSubtitles">Diet Type</h4>
+                            <ul class="recipeFacts">
                                 {%for dietTypeOption in item["dietType"]%}
                                 <li>{{ dietTypeOption }}</li>
                                 {%endfor%}
                             </ul>
-                            <h4 class="recipe-subtitles">Cuisine</h4>
-                            <p class="recipe-facts">
+                            <h4 class="recipeSubtitles">Cuisine</h4>
+                            <p class="recipeFacts">
                                 {{ item["cuisineType"] }}
                             </p>
 
@@ -52,25 +52,25 @@
 
             <div class="row">
                 <div class="col-xs-12 col-lg-6">
-                    <h4 class="recipe-subtitles">Ingredients</h4>
+                    <h4 class="recipeSubtitles">Ingredients</h4>
                     {{ item["recipeIngredients"]|safe }}
                 </div>
                 <div class="col-xs-12 col-lg-6">
-                    <h4 class="recipe-subtitles">Method</h4>
+                    <h4 class="recipeSubtitles">Method</h4>
                     {{ item["recipeMethod"]|safe }}
 
                 </div>
 
                 <div class="col-lg-12">
-                    <h4 class="recipe-subtitles">Notes</h4>
-                    <p class="recipe-facts">{{ item["recipeNotes"]|safe }}</p>
+                    <h4 class="recipeSubtitles">Notes</h4>
+                    <p class="recipeFacts">{{ item["recipeNotes"]|safe }}</p>
                 </div>
             </div>
 
 
             <div class="row">
                 <div class="col-lg-12">
-                        <h4 class="recipe-subtitles">Actions</h4>
+                        <h4 class="recipeSubtitles">Actions</h4>
                 </div>
             </div>
             <div class="row">

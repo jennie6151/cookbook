@@ -10,28 +10,30 @@
     {% extends "template.html" %}
     {% block content %}
     <main>
+        {% for item in recipe %}
         <div class="form-row form-styling">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="recipe-title">Edit a recipe <small class="text-muted">Make the necessary changes to a
+                        <h1 class="recipeTitle">Edit a recipe <small class="text-muted">Make the necessary changes to a
                                 recipe using this form.</small></h1>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                            <div class="form-group col-lg-4">
-                                    <button class="btn btn-info" type="submit">Back to recipe</button>
-                            </div>
+                        <div class="form-group col-lg-4">
+                            <a href="./viewRecipes?_id={{ item['_id'] }}" class="btn btn-info btn-block">Back to
+                                recipe</a>
+
+                        </div>
                     </div>
                 </div>
             </div>
-
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <form action="/updateRecipe" method="POST" enctype="multipart/form-data">
-                            {% for item in recipe %}
+
                             <input type="text" name="_id" value="{{ item['_id'] }}" hidden>
 
                             <div class="form-group form-group-required col-lg-4">
@@ -203,7 +205,7 @@
                                 <textarea class="form-control richTextEditor" id="recipeNotes" name="recipeNotes"
                                     rows="3" value="{{ item['recipeNotes'] }}">{{ item['recipeNotes'] }}</textarea>
                             </div>
-                            {% endfor %}
+
                             <div class="form-group col-lg-4">
                                 <button class="btn btn-success" type="submit">Update recipe</button>
                             </div>
@@ -212,6 +214,7 @@
                 </div>
             </div>
         </div>
+        {% endfor %}
     </main>
 
     {% endblock %}
