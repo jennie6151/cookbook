@@ -48,8 +48,9 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
 
 1. Enable Heroku.
 2. Select Master Branch
-3. Heroku URL is then produced. Copy this.
-4. Clone code
+3. Select Settings > Reveal Config Vars > Enter "IP" in left column and "0.0.0.0" in right column. Then in a new row enter "PORT" in left column and "8080" in right column.
+4. Heroku URL is then produced. Copy this.
+5. Clone code 
 
 <a name="features"></a>
 ## Features
