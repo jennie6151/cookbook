@@ -27,7 +27,11 @@ def search():
         recipe = Recipes.find({refer: ObjectId(recipeSearch)})
     else:
         results = Recipes.find({'recipeTitle': {'$regex': '.*'+recipeSearch+'.*', '$options' : 'i'}})
-
+    sortOn=request.args.get('sort_on')or 'recipeTitle' 
+    sortDirection = 1
+    if(sortOn == "like"):
+        sortDirection =-1
+    results=results.sort(sortOn,sortDirection)
     return render_template('searchresults.html', searchResults=results)
 
 
