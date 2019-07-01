@@ -116,7 +116,7 @@ color:#343a40;
 
 .footerStyling {
     position: relative;
-    background-color:none;
+    background-color: transparent;
     bottom: 0;
     width: 100%;
     height: 60px;
