@@ -49,6 +49,12 @@ color:#343a40;
     color: #ff0000;
 }
 
+.asteriskTextStyling{
+    color:#ff0000;
+    font-style: italic;
+    text-align:center;
+}
+
 .formHeadings{
     font-weight:bold;
 }
