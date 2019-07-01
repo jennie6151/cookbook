@@ -46,8 +46,10 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
 <a name="deploy"></a>
 ## Deployment
 
-* I have used the automated deployment engine on Heroku which gets triggered by a push/sync.
-
+1. Enable Heroku.
+2. Select Master Branch
+3. Heroku URL is then produced. Copy this.
+4. Clone code
 
 <a name="features"></a>
 ## Features
@@ -70,7 +72,7 @@ These features have not been included in stage 1 of development but would be imp
     * Used to create mock ups of the site which have been uploaded as PDF files
 * **Html** and **CSS**
     * Base languages used to create the site
-* [Visual Studio Code]
+* [Visual Studio Code](https://visualstudio.microsoft.com/)
     * Code editor used to write above code
 * [mongoDB Atlas](https://www.mongodb.com/cloud/atlas)
     * Database program used
@@ -83,7 +85,7 @@ These features have not been included in stage 1 of development but would be imp
 * [Git](https://git-scm.com/)
     * Used for version control
 * [Github](https://github.com/)
-    * Used as hosting platform for git
+    * Used as hosting platform for Git
 * [Heroku](https://www.heroku.com/)
     * Platform used to host website
 * Other resources used: [Fontawesome v5.7.2](https://fontawesome.com/)
