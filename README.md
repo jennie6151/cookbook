@@ -59,7 +59,9 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
 
 
 ### Features left to implement
-* None
+These features have not been included in stage 1 of development but would be implemented in future developments:
+* Adding basic user registration and authentication to the site
+* Adding pagination to the search results page 
 
 <a name="tech"></a>
 ## Technology used
@@ -103,15 +105,16 @@ The site is styled with **Bootstrap** and I have made the site responsive so use
 
 ## User stories as part of testing
 As a user I want to...
-1. search 'chicken' and find five recipes. Test performed and true.
-2. search 'Lankan' and find 1 recipe of 'Sri Lankan fried chicken' and click on the result and it to open the recipe page. Test performed and true.
+1. search 'chicken' and see 5 recipes. Test performed and true.
+2. search 'Lankan' and see 1 recipe of 'Sri Lankan fried chicken' and click on the result and it to open the recipe page. Test performed and true.
 3. search 'pizza' and find 'Fresh topped pizza' and then from the Search Results page type 'BBQ' and my search to be updated. Test performed and true.
 4. search 'frog' and find 0 recipes and a warning message. Test performed and true.
-5. click on "Vegan" from the dropdown filter and see the results limit. Test performed and true.
+5. click on "Low-fat" from the dropdown filter and see 3 results. Test performed and true.
 6. click on the 'Add recipe' button and be able to add a recipe and for the mandatory fields to stop form submission if not completed. Recipe to appear on the index page in a new card. Test performed and true.
-7. from any chosen recipe click 'Like recipe' button and for the 'Recipe likes:' to update on the recipe and on the homepage card. Test performed and true.
-8. from any chosen recipe click 'Edit recipe' button and to be taken to the edit page, make changes and for these to be reflected in recipe and index pages. Test performed and true.
-9. from any chosen recipe click 'Delete recipe' button and a confirmation pop up to appear, on clicking OK the recipe will be removed from the website and database. Test performed and true.
+7. search 'soup' and use the 'Sort by' dropdown to change between alphabetical listing (ascending) or by number of likes (descending). Test performed and true.
+8. from any chosen recipe click 'Like recipe' button and for the 'Recipe likes:' to update on the recipe and on the homepage card. Test performed and true.
+9. from any chosen recipe click 'Edit recipe' button and to be taken to the edit page, make changes and for these to be reflected in recipe and index pages. Test performed and true.
+10. from any chosen recipe click 'Delete recipe' button and a confirmation pop up to appear, on clicking OK the recipe will be removed from the website and database. Test performed and true.
 
 
 <a name="version"></a>
