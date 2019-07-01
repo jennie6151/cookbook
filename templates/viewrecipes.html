@@ -67,42 +67,37 @@
                 </div>
             </div>
 
-
             <div class="row">
                 <div class="col-lg-12">
-                        <h4 class="recipeSubtitles">Actions</h4>
+                    <h4 class="recipeSubtitles">Actions</h4>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-2">
                     <form action="/like" method="POST">
                         <button class="btn btn-primary buttonStyling" type="submit"><i
-                                class="fas fa-smile iconStyling"></i>Like recipe</a>
-                            <input type="text" name="_id" value="{{ item['_id'] }}" hidden>
+                                class="fas fa-smile iconStyling"></i>Like recipe</button>
+                        <input type="text" name="_id" value="{{ item['_id'] }}" hidden>
                     </form>
                 </div>
-              
+
                 <div class="col-lg-2">
-                    <a href="./edit?_id={{ item['_id'] }}"><button type="submit"
-                            class="btn btn-warning buttonStyling"><i class="fas fa-edit iconStyling"></i>Edit
-                            recipe</button></a>
+                    <a class="btn btn-warning buttonStyling" href="./edit?_id={{ item['_id'] }}"><i
+                            class="fas fa-edit iconStyling"></i>Edit
+                        recipe</a>
                 </div>
                 <div class="col-lg-2">
-                        <a href="./remove?_id={{ item['_id'] }}"><button type="submit" class="btn btn-danger buttonStyling"
-                                onclick="return confirm('Are you sure you want to delete this recipe?');"><i
-                                    class="fas fa-trash iconStyling"></i>Delete
-                                recipe</button></a>
-                    </div>
+                    <a class="btn btn-danger buttonStyling"
+                        onclick="return confirm('Are you sure you want to delete this recipe?');"
+                        href="./remove?_id={{ item['_id'] }}"><i
+                                class="fas fa-trash iconStyling"></i>Delete
+                            recipe</a>
+                </div>
 
             </div>
         </div>
 
         {%endfor%}
-
-        </div>
-        </div>
-
-
 
     </main>
 
