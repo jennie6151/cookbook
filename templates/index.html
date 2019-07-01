@@ -9,7 +9,7 @@
 <body>
   {% extends "template.html" %}
   {% block content %}
-  <main role="main">
+  <main>
 
     <section class="jumbotron text-center">
       <div class="container">
@@ -29,7 +29,6 @@
           <div><button type="submit" class="btn btn-info searchButtonStyling">Search</button></div>
         </form>
       </div>
-      </div>
     </section>
 
     <div class="container">
@@ -42,25 +41,25 @@
               <option value="">Choose...</option>
               <option value="Dairy-free" {% if request.values.get('filter_by') == 'Dairy-free' %} selected {% endif %}>
                 Dairy-free</option>
-              <option value="Egg-free" {% if request.values.get('filter_by') == 'Egg-free' %} selected {% endif %}>
+              <option value="Egg-free" {% if request.values.get('filter_by') == 'Egg-free' %} {% endif %}>
                 Egg-free</option>
-              <option value="Gluten-free" {% if request.values.get('filter_by') == 'Gluten-free' %} selected
+              <option value="Gluten-free" {% if request.values.get('filter_by') == 'Gluten-free' %}
                 {% endif %}>Gluten-free</option>
-              <option value="Healthy" {% if request.values.get('filter_by') == 'Healthy' %} selected {% endif %}>Healthy
+              <option value="Healthy" {% if request.values.get('filter_by') == 'Healthy' %} {% endif %}>Healthy
               </option>
-              <option value="Heart-healthy" {% if request.values.get('filter_by') == 'Heart-healthy' %} selected
+              <option value="Heart-healthy" {% if request.values.get('filter_by') == 'Heart-healthy' %}
                 {% endif %}>Heart-healthy</option>
-              <option value="Low-calorie" {% if request.values.get('filter_by') == 'Low-calorie' %} selected
+              <option value="Low-calorie" {% if request.values.get('filter_by') == 'Low-calorie' %}
                 {% endif %}>Low-calorie</option>
-              <option value="Low-fat" {% if request.values.get('filter_by') == 'Low-fat' %} selected {% endif %}>Low-fat
+              <option value="Low-fat" {% if request.values.get('filter_by') == 'Low-fat' %} {% endif %}>Low-fat
               </option>
-              <option value="Low-salt" {% if request.values.get('filter_by') == 'Low-salt' %} selected {% endif %}>
+              <option value="Low-salt" {% if request.values.get('filter_by') == 'Low-salt' %} {% endif %}>
                 Low-salt</option>
-              <option value="Nut-free" {% if request.values.get('filter_by') == 'Nut-free' %} selected {% endif %}>
+              <option value="Nut-free" {% if request.values.get('filter_by') == 'Nut-free' %} {% endif %}>
                 Nut-free</option>
-              <option value="Vegan" {% if request.values.get('filter_by') == 'Vegan' %} selected {% endif %}>Vegan
+              <option value="Vegan" {% if request.values.get('filter_by') == 'Vegan' %} {% endif %}>Vegan
               </option>
-              <option value="Vegetarian" {% if request.values.get('filter_by') == 'Vegetarian' %} selected {% endif %}>
+              <option value="Vegetarian" {% if request.values.get('filter_by') == 'Vegetarian' %} {% endif %}>
                 Vegetarian</option>
             </select>
           </div>
@@ -83,8 +82,6 @@
         </div>
         {%endfor%}
       </div>
-    </div>
-    </div>
     </div>
 
   </main>
