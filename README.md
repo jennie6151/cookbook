@@ -82,7 +82,7 @@ These features have not been included in stage 1 of development but would be imp
     * Used for all recipe content (so I didn't have to channel my inner Delia Smith)
 * [Git](https://git-scm.com/)
     * Used for version control
-*[Github](https://github.com/)
+* [Github](https://github.com/)
     * Used as hosting platform for git
 * [Heroku](https://www.heroku.com/)
     * Platform used to host website
