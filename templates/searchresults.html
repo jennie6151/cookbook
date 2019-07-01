@@ -27,8 +27,7 @@
       <div class="row">
       <div class="form-group col-lg-3 offset-lg-9 float-right">
           <label for="recipeSorting" class="control-label formHeadings">Sort by</label>
-          <select onchange="document.getElementById('sortDropdown').submit();" id="recipeSorting" name="sort_on" class="form-control" required>
-
+          <select onchange="document.getElementById('sortDropdown').submit();" id="recipeSorting" name="sort_on" class="form-control">
               <option value="recipeTitle" {% if request.values.get('sort_on') == 'recipeTitle' %} selected {% endif %}>Title</option>
               <option value="like" {% if request.values.get('sort_on') == 'like' %} selected {% endif %}>Likes</option>
           </select>

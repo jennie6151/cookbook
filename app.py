@@ -15,7 +15,11 @@ Recipes = mongo.db.Recipes
 
 @app.route("/")
 def home():
-    pageRecipes = Recipes.find().sort("_id", -1).limit(12)
+    filterValue = request.values.get("filter_by")or ""
+    if(filterValue == ""):
+        pageRecipes = Recipes.find().sort("_id", -1).limit(12)
+    else:
+        pageRecipes = Recipes.find({"dietType":filterValue}).sort("_id", -1).limit(12)
     return render_template("index.html", pageRecipes=pageRecipes)
 
 

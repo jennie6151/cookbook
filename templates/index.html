@@ -28,36 +28,34 @@
           </div>
           <div><button type="submit" class="btn btn-info searchButtonStyling">Search</button></div>
         </form>
-
       </div>
       </div>
-
-
     </section>
 
-    <div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 offset-lg-8">
-            <div class="form-group form-group-required mx-auto">
-              <label for="dietTypeSelector" class="control-label">Diet type</label>
-              <select id="dietTypeSelector" name="dietTypeSelector" class="form-control" required>
-                <option>Choose...</option>
-                <option>Dairy-free</option>
-                <option>Egg-free</option>
-                <option>Gluten-free</option>
-                <option>Healthy</option>
-                <option>Heart-healthy</option>
-                <option>Low-calorie</option>
-                <option>Low-fat</option>
-                <option>Low-salt</option>
-                <option>Nut-free</option>
-                <option>Vegan</option>
-                <option>Vegetarian</option>
-              </select>
-            </div>
-          </div>
-        </div>
+    <form id="filterDropdown" method="GET">
+      <div class="row">
+      <div class="form-group col-lg-3 offset-lg-9">
+          <label for="recipeFiltering" class="control-label formHeadings">Filter by diet type</label>
+          <select onchange="document.getElementById('filterDropdown').submit();" id="recipeFiltering" name="filter_by" class="form-control">
+              <option value="">Choose...</option>
+              <option value="Dairy-free" {% if request.values.get('filter_by') == 'Dairy-free' %} selected {% endif %}>Dairy-free</option>
+              <option value="Egg-free" {% if request.values.get('filter_by') == 'Egg-free' %} selected {% endif %}>Egg-free</option>
+              <option value="Gluten-free" {% if request.values.get('filter_by') == 'Gluten-free' %} selected {% endif %}>Gluten-free</option>
+              <option value="Healthy" {% if request.values.get('filter_by') == 'Healthy' %} selected {% endif %}>Healthy</option>
+              <option value="Heart-healthy" {% if request.values.get('filter_by') == 'Heart-healthy' %} selected {% endif %}>Heart-healthy</option>
+              <option value="Low-calorie" {% if request.values.get('filter_by') == 'Low-calorie' %} selected {% endif %}>Low-calorie</option>
+              <option value="Low-fat" {% if request.values.get('filter_by') == 'Low-fat' %} selected {% endif %}>Low-fat</option>
+              <option value="Low-salt" {% if request.values.get('filter_by') == 'Low-salt' %} selected {% endif %}>Low-salt</option>
+              <option value="Nut-free" {% if request.values.get('filter_by') == 'Nut-free' %} selected {% endif %}>Nut-free</option>
+              <option value="Vegan" {% if request.values.get('filter_by') == 'Vegan' %} selected {% endif %}>Vegan</option>
+              <option value="Vegetarian" {% if request.values.get('filter_by') == 'Vegetarian' %} selected {% endif %}>Vegetarian</option>
+            </select>
+      </div>
+      </div>
+      </form>
+
+        
+
 
         <div class="row">
           {% for recipe in pageRecipes %}
