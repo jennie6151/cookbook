@@ -45,8 +45,8 @@
         <div class="col-sm-6 col-lg-4">
           <div class="card cardStyling">
             <div class="card-body">
-              <img class="recipeImageStyling" src="{{url_for('file', filename=recipe['recipeImage'])}}"
-                alt="{{recipe['recipeTitle']}}">
+                <a href="./viewRecipes?_id={{ recipe['_id'] }}"><img class="recipeImageStyling" src="{{url_for('file', filename=recipe['recipeImage'])}}"
+                alt="{{recipe['recipeTitle']}}"></a>
               <h5 class="card-title text-truncate">{{ recipe["recipeTitle"] }}</h5>
               <h6 class="text-muted">Serves: {{ recipe["recipeServes"] }}</h6>
               <h6 class="text-muted">Recipe likes: {{ recipe["like"]|default("0") }}</h6>
