@@ -4,10 +4,11 @@ from flask_pymongo import PyMongo
 import os
 import random
 import re
+import env as config
 
 app = Flask(__name__)
 
-app.config["MONGO_URI"] =os.getenv('DB')
+app.config["MONGO_URI"] =config.DB
 mongo = PyMongo(app)
 
 Recipes = mongo.db.Recipes
