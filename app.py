@@ -7,7 +7,7 @@ import re
 
 app = Flask(__name__)
 
-app.config["MONGO_URI"] = "mongodb+srv://app1:fRH3SQCA9Tq5VG18@myfirstcluster-7pmlf.mongodb.net/Cookbook?retryWrites=true"
+app.config["MONGO_URI"] =os.getenv('DB')
 mongo = PyMongo(app)
 
 Recipes = mongo.db.Recipes
