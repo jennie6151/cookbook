@@ -137,5 +137,6 @@ I used **Git** for versioning on this project, hosted **Git** on **Github**. Hos
 * py -m venv env
 * env\Scripts\activate
 * set FLASK_ENV=development
+* set DB=<secretkey>
 
 #### *MIT © 2019 Jennifer Dick*
