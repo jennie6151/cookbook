@@ -128,7 +128,8 @@ I used **Git** for versioning on this project, hosted **Git** on **Github**. Hos
 ## Acknowledgments/credits
 * *Antonija Šimić* - Code Institute mentor.
 * *Paul Lewis* - colleague (Software Developer) who tested my finished site.
-* *Mallory Bemrose* - colleague who tested my finished site. 
+* *Mallory Bemrose* - colleague who tested finished site.
+* *Michael Skelton* - family who tested finished site. 
 * *Haley Schafer* - Code Institute tutor. For help with deployment to Heroku, secret keys and debug mode.
 
 ## Commands to remember
