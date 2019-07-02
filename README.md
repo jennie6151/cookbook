@@ -127,7 +127,7 @@ I used **Git** for versioning on this project, hosted **Git** on **Github**. Hos
 <a name="credits"></a>
 ## Acknowledgments/credits
 * *Antonija Šimić* - Code Institute mentor.
-* *Paul Lewis* - colleague (Software Developer) who tested my finished site.
+* *Paul Lewis* - colleague (Software Developer) who tested finished site.
 * *Mallory Bemrose* - colleague who tested finished site.
 * *Michael Skelton* - family who tested finished site. 
 * *Haley Schafer* - Code Institute tutor. For help with deployment to Heroku, secret keys and debug mode.
